@@ -1,11 +1,10 @@
+import Image from 'next/image';
 function Page1() {
-
   const cards = [1, 2, 3, 4, 5].map((num) => (
     <div key={num} className="max-w-xs rounded bg-amber-500 p-4">
       <h3 className="text-xl font-bold text-white">Card {num}</h3>
       <p className="mt-2 text-white">
-        This is a description for card {num}. It looks great on any screen
-        size.
+        This is a description for card {num}. It looks great on any screen size.
       </p>
     </div>
   ));
@@ -18,10 +17,12 @@ function Page1() {
         Click me
       </button>
 
-      <img
+      <Image
         src="/forest.jpg"
         alt="Forest"
         className="w-full sm:w-1/2 lg:w-1/3"
+        width={600}
+        height={400}
       />
 
       <button className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">

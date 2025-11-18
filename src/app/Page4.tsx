@@ -1,3 +1,4 @@
+import Image from 'next/image';
 function Page4() {
   return (
     <>
@@ -23,11 +24,13 @@ function Page4() {
             development process.
           </p>
         </div>
-        <img
+        <Image
           src="/forest.jpg"
           className="order-2 w-full rounded object-cover md:order-1 md:w-1/3"
           alt="Illustration"
-        ></img>
+          width={400}
+          height={300}
+        />
       </section>
 
       <div className="flex">
