@@ -8,7 +8,7 @@ function Page5() {
         viewBox="0 0 262 52"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="text-gray-1000 shrink-0"
+        className="text-gray-1000 shrink-0"
       >
         <path
           fill-rule="evenodd"
@@ -23,7 +23,7 @@ function Page5() {
         viewBox="0 0 262 52"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="text-gray-1000 shrink-0"
+        className="text-gray-1000 shrink-0"
       >
         <path
           fill-rule="evenodd"
@@ -33,53 +33,56 @@ function Page5() {
         ></path>
       </svg>
 
-      <div className="relative  mx-auto w-fit">
+      <div className="card w-fit">
+        <p>Tailwind Card</p>
+      </div>
+      <div className="relative mx-auto w-fit">
         <Image
-          className="rounded-full w-20 h-20"
+          className="h-20 w-20 rounded-full"
           src="https://fastly.picsum.photos/id/1054/200/200.jpg?hmac=7qtHUdgOyKxMVpcUELySqbknGm7xI76LbA9CE0uag_o"
           alt="img"
           width={80}
           height={80}
         />
-        <span className="absolute top-1 right-1 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-1">
+        <span className="absolute top-1 right-1 rounded-full bg-red-500 px-2 py-1 text-xs font-bold text-white">
           3
         </span>
       </div>
 
       <div className="flex justify-center">
-        <div className="inline-block relative w-fit">
+        <div className="relative inline-block w-fit">
           <Image
-            className="rounded-full w-20 h-20"
+            className="h-20 w-20 rounded-full"
             src="https://fastly.picsum.photos/id/1054/200/200.jpg?hmac=7qtHUdgOyKxMVpcUELySqbknGm7xI76LbA9CE0uag_o"
             alt="img"
             width={80}
             height={80}
           />
-          <span className="absolute top-1 right-1 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-1">
+          <span className="absolute top-1 right-1 rounded-full bg-red-500 px-2 py-1 text-xs font-bold text-white">
             3
           </span>
         </div>
-        <div className="inline-block relative  w-fit">
+        <div className="relative inline-block w-fit">
           <Image
-            className="rounded-full w-20 h-20"
+            className="h-20 w-20 rounded-full"
             src="https://fastly.picsum.photos/id/953/200/200.jpg?hmac=S5zbAl9YqUc02Oezl6cR8gcLfF3pwkQ5_AcG8JXjeC0"
             alt="img"
             width={80}
             height={80}
           />
-          <span className="absolute top-1 right-1 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-1">
+          <span className="absolute top-1 right-1 rounded-full bg-red-500 px-2 py-1 text-xs font-bold text-white">
             3
           </span>
         </div>
       </div>
 
-      <div className="flex justify-center m-4 gap-4">
-        <div className="inline-block w-20 h-20 border-green-700 border-8 box-border rounded-xl"></div>
-        <div className="inline-block w-20 h-20 bg-pink-500 rounded-xl"></div>
+      <div className="m-4 flex justify-center gap-4">
+        <div className="box-border inline-block h-20 w-20 rounded-xl border-8 border-green-700"></div>
+        <div className="inline-block h-20 w-20 rounded-xl bg-pink-500"></div>
       </div>
 
       <div className="flex flex-row items-center">
-        <div className="w-24 h-30 rounded overflow-hidden bg-amber-300 m-2">
+        <div className="m-2 h-30 w-24 overflow-hidden rounded bg-amber-300">
           <Image
             className="h-30"
             style={{ objectFit: 'contain' }}
@@ -89,7 +92,7 @@ function Page5() {
             height={200}
           />
         </div>
-        <div className="w-30 h-24 rounded overflow-hidden bg-amber-300 m-2">
+        <div className="m-2 h-24 w-30 overflow-hidden rounded bg-amber-300">
           <Image
             className="h-24"
             style={{ objectFit: 'contain' }}
@@ -99,7 +102,7 @@ function Page5() {
             height={200}
           />
         </div>
-        <div className="w-24 h-30 rounded overflow-hidden bg-amber-300 m-2">
+        <div className="m-2 h-30 w-24 overflow-hidden rounded bg-amber-300">
           <Image
             className="h-30"
             style={{ objectFit: 'cover' }}
@@ -109,7 +112,7 @@ function Page5() {
             height={200}
           />
         </div>
-        <div className="w-30 h-24 rounded overflow-hidden bg-amber-300 m-2">
+        <div className="m-2 h-24 w-30 overflow-hidden rounded bg-amber-300">
           <Image
             className="h-24"
             style={{ objectFit: 'cover' }}
@@ -119,7 +122,7 @@ function Page5() {
             height={200}
           />
         </div>
-        <div className="w-30 h-24 rounded overflow-hidden bg-amber-300 m-2">
+        <div className="m-2 h-24 w-30 overflow-hidden rounded bg-amber-300">
           <Image
             className="h-24"
             style={{ objectFit: 'cover', objectPosition: 'bottom' }}
@@ -133,7 +136,7 @@ function Page5() {
 
       <div className="">
         <iframe
-          className="aspect-video rounded-xl m-12"
+          className="m-12 aspect-video rounded-xl"
           src="https://www.youtube.com/embed/5S0o7uuKJo8"
           title="YouTube video player"
           frameBorder="0"

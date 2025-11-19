@@ -11,7 +11,7 @@ export default function Home() {
   const [page, setPage] = useState(1);
 
   return (
-    <div className='dark'>
+    <div className="dark">
       <Navigation currentPage={page} onPageChange={setPage} />
       <div>{page === 1 && <Page1 />}</div>
       <div>{page === 2 && <Page2 />}</div>
