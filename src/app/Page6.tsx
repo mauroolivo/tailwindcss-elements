@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Image from 'next/image';
 
 function Page6() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,21 +6,28 @@ function Page6() {
 
   return (
     <>
-
-      <div id="modal" className='fixed inset-0 bg-black/50 flex items-center justify-center z-10 hidden'>
-        <div className='bg-white rounded-lg shadow-xl max-w-md w-full p-6'>
-          <h2 className='text-2xl font-bold mb-4'>Modal Title</h2>
-          <p className='mb-6'>This is the content of the modal.</p>
-          <div className='flex justify-end'>
+      <div
+        id="modal"
+        // flex or hidden
+        className="fixed inset-0 z-10 hidden items-center justify-center bg-black/50"
+      >
+        <div className="w-full max-w-md rounded-lg bg-white p-6 shadow-xl">
+          <h2 className="mb-4 text-2xl font-bold">Modal Title</h2>
+          <p className="mb-6">This is the content of the modal.</p>
+          <div className="flex justify-end">
             <button
-              className='bg-blue-500 text-white px-4 py-2 rounded mr-2 hover:bg-blue-600'
-              onClick={() => {/* Add save logic here */}}
+              className="mr-2 rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+              onClick={() => {
+                /* Add save logic here */
+              }}
             >
               Save Changes
             </button>
             <button
-              className='bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400'
-              onClick={() => {/* Add close logic here */}}
+              className="rounded bg-gray-300 px-4 py-2 text-gray-700 hover:bg-gray-400"
+              onClick={() => {
+                /* Add close logic here */
+              }}
             >
               Close
             </button>
@@ -179,7 +185,9 @@ function Page6() {
         </div>
       </div>
 
-      <div className='max-w-9/12 shadow-md hover:shadow-lg transition-shadow'>00220022</div>
+      <div className="max-w-9/12 shadow-md transition-shadow hover:shadow-lg">
+        00220022
+      </div>
     </>
   );
 }
