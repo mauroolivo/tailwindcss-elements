@@ -39,6 +39,12 @@ function Navigation({ currentPage, onPageChange }: NavigationProps) {
         >
           5
         </button>
+        <button
+          className={`${currentPage === 6 ? 'text-gray-400' : ''}`}
+          onClick={() => onPageChange(6)}
+        >
+          6
+        </button>
       </div>
       <ThemeSelector />
     </>

@@ -56,15 +56,21 @@ function Page1() {
       </div>
 
       <div className="mx-auto my-8 max-w-sm rounded bg-white p-6 shadow-2xl">
-        Centering this with fitted width
+        <p className="text-justify">
+          Centering this with fitted width using margin auto and max-width
+        </p>
+        <p className="">
+          Centering this with fitted width using margin auto and max-width
+        </p>
       </div>
 
-      <img
-        className="mx-auto h-32 w-32 transform rounded-lg object-cover transition-transform hover:scale-105"
+      <Image
         src="https://fastly.picsum.photos/id/616/300/300.jpg?hmac=eQKtU2fvqBbWzcZLd1QWT51Nm-Mro6VnR7UkUvM3LZQ"
-        alt="img"
+        alt="Forest"
+        className="mx-auto h-32 w-32 transform rounded-lg object-cover transition-transform hover:scale-105"
+        width={300}
+        height={300}
       />
-
       <div className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {cards}
       </div>

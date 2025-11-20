@@ -1,77 +1,9 @@
-import { useState } from 'react';
 import Image from 'next/image';
 
 function Page2() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>
-      <nav className="flex flex-wrap items-center justify-between bg-gray-800 p-4">
-        <div className="mr-6 flex shrink-0 items-center text-white">
-          <span className="text-xl font-semibold">MyBrand</span>
-        </div>
-        <div className="block lg:hidden">
-          <button
-            className="text-gray-300 hover:text-white focus:outline-none"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          className={`${
-            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-          } w-full grow overflow-hidden transition-all duration-500 ease-in-out lg:flex lg:max-h-none lg:w-auto lg:items-center lg:opacity-100`}
-        >
-          <div className="text-sm lg:grow">
-            <a
-              href="#"
-              className="mt-4 mr-4 block text-gray-300 hover:text-white lg:mt-0 lg:inline-block"
-            >
-              Home
-            </a>
-            <a
-              href="#"
-              className="mt-4 mr-4 block text-gray-300 hover:text-white lg:mt-0 lg:inline-block"
-            >
-              About
-            </a>
-            <a
-              href="#"
-              className="mt-4 mr-4 block text-gray-300 hover:text-white lg:mt-0 lg:inline-block"
-            >
-              Services
-            </a>
-            <a
-              href="#"
-              className="mt-4 mr-4 block text-gray-300 hover:text-white lg:mt-0 lg:inline-block"
-            >
-              Contact
-            </a>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="mt-4 inline-block rounded border border-white px-4 py-2 text-sm leading-none text-white hover:border-transparent hover:bg-white hover:text-gray-800 lg:mt-0"
-            >
-              Download
-            </a>
-          </div>
-        </div>
-      </nav>
-
       <div className="flex min-h-screen items-center justify-center bg-amber-50 p-6">
         <div className="max-w-xl space-y-6 text-center">
           <h1 className="font-roboto text-4xl font-thin text-gray-900 sm:text-5xl">
@@ -172,7 +104,6 @@ function Page2() {
                 <p className="text-gray-600">$29.99</p>
               </div>
             </div>
-            
           </section>
         </div>
       </div>
