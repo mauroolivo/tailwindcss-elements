@@ -4,11 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url(form.css);
 @import 'tailwindcss';
-@plugin "@tailwindcss/forms";
+@plugin '@tailwindcss/forms';
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-
-
 
 @theme {
   --color-my-pippo: oklch(0.72 0.11 178);
@@ -47,10 +45,8 @@
 }
 
 @layer components {
-  .btn {
-    padding: .5rem 1rem;
-    border-radius: .25rem;
-    font-weight: 600;
+  .btn-main {
+    @apply inline-flex items-center justify-center rounded px-4 py-2 font-medium focus:outline-none;
   }
   .card {
     background-color: var(--color-white);
@@ -59,7 +55,4 @@
     margin: 1rem;
     box-shadow: var(--shadow-xl);
   }
-}
-@utility content-hidden {
-  content-visibility: hidden;
 }

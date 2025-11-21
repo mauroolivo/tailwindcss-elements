@@ -188,6 +188,15 @@ function Page6() {
       <div className="max-w-9/12 shadow-md transition-shadow hover:shadow-lg">
         00220022
       </div>
+
+      <div>
+        <button className="btn-main bg-blue-600 text-white transition-all hover:bg-blue-700 focus:ring-2 focus:ring-blue-300 active:scale-95">
+          Click me
+        </button>
+        <button disabled className="btn-main bg-gray-400 text-gray-200 disabled:cursor-not-allowed disabled:opacity-50">
+          Click me
+        </button>
+      </div>
     </>
   );
 }
