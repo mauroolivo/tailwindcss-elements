@@ -10,7 +10,8 @@ function Page1() {
   ));
   return (
     <>
-      <h2 className="text-7xl text-green-700 font-stretch-condensed">
+      <h1>Main title</h1>
+      <h2 className="text-xl text-green-700 font-stretch-condensed">
         Welcome aboard!
       </h2>
       <button className="m-2 rounded bg-green-500 p-3 hover:bg-green-600 focus:ring-2 focus:ring-green-300">

@@ -8,6 +8,8 @@ import Page4 from './Page4';
 import Page5 from './Page5';
 import Page6 from './Page6';
 import Page7 from './Page7';
+import Page8 from './Page8';
+import Page9 from './Page9';
 
 export default function Home() {
   const [page, setPage] = useState(1);
@@ -22,6 +24,8 @@ export default function Home() {
       <div>{page === 5 && <Page5 />}</div>
       <div>{page === 6 && <Page6 />}</div>
       <div>{page === 7 && <Page7 />}</div>
+      <div>{page === 8 && <Page8 />}</div>
+      <div>{page === 9 && <Page9 />}</div>
     </div>
   );
 }
