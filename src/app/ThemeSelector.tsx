@@ -1,3 +1,4 @@
+'use client';
 function ThemeSelector() {
   return (
     <div className="bg-bgmain text-primary flex justify-center gap-4 p-4">

@@ -9,18 +9,29 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-  --color-my-pippo: oklch(0.72 0.11 178);
-  --font-roboto: 'Roboto', sans-serif;
-  --font-oswald: 'Oswald', sans-serif;
-  --color-super-green: color(display-p3 0.2824 0.8353 0.5922);
-
-  /* Light mode colors (default) */
-  --color-bgmain: #ffffff;
+  /* Light Mode */
+  --color-bgmain: oklch(0.9639 0.01875 250);
   --color-primary: #3b82f6;
   --color-secondary: #10b981;
   --color-text: #1f2937;
   --color-surface: #f9fafb;
   --color-border: #e5e7eb;
+}
+/* Dark Mode */
+[data-theme='dark'] {
+  --color-bgmain: oklch(0.13 0.028 261.692);
+  --color-primary: #60a5fa;
+  --color-secondary: #34d399;
+  --color-text: #f9fafb;
+  --color-surface: #1f2937;
+  --color-border: #374151;
+}
+
+@theme {
+  --color-my-pippo: oklch(0.72 0.11 178);
+  --font-roboto: 'Roboto', sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
+  --color-super-green: color(display-p3 0.2824 0.8353 0.5922);
 
   --animate-fade-in-scale: fade-in-scale 3s ease-out;
   @keyframes fade-in-scale {
@@ -44,15 +55,6 @@
       transform: rotate(3deg);
     }
   }
-}
-
-[data-theme='dark'] {
-  --color-bgmain: #111827;
-  --color-primary: #60a5fa;
-  --color-secondary: #34d399;
-  --color-text: #f9fafb;
-  --color-surface: #1f2937;
-  --color-border: #374151;
 }
 
 @layer base {

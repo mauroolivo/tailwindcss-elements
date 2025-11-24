@@ -1,5 +1,3 @@
-import ThemeSelector from './ThemeSelector';
-
 interface NavigationProps {
   currentPage: number;
   onPageChange: (page: number) => void;
@@ -62,9 +60,8 @@ function Navigation({ currentPage, onPageChange }: NavigationProps) {
           onClick={() => onPageChange(9)}
         >
           9
-        </button> 
+        </button>
       </div>
-      <ThemeSelector />
     </>
   );
 }

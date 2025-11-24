@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Script from 'next/script';
+import ThemeSelector from './ThemeSelector';
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -39,8 +40,68 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-bgmain antialiased`}
       >
+        <>
+          <div className="text-primary flex justify-center gap-2 p-4">
+            <h1>Layout Page</h1>
+            {/* <button
+              className={`${currentPage === 1 ? 'text-gray-400' : ''}`}
+              onClick={() => onPageChange(1)}
+            >
+              1
+            </button>
+            <button
+              className={`${currentPage === 2 ? 'text-gray-400' : ''}`}
+              onClick={() => onPageChange(2)}
+            >
+              2
+            </button>
+            <button
+              className={`${currentPage === 3 ? 'text-gray-400' : ''}`}
+              onClick={() => onPageChange(3)}
+            >
+              3
+            </button>
+            <button
+              className={`${currentPage === 4 ? 'text-gray-400' : ''}`}
+              onClick={() => onPageChange(4)}
+            >
+              4
+            </button>
+            <button
+              className={`${currentPage === 5 ? 'text-gray-400' : ''}`}
+              onClick={() => onPageChange(5)}
+            >
+              5
+            </button>
+            <button
+              className={`${currentPage === 6 ? 'text-gray-400' : ''}`}
+              onClick={() => onPageChange(6)}
+            >
+              6
+            </button>
+            <button
+              className={`${currentPage === 7 ? 'text-gray-400' : ''}`}
+              onClick={() => onPageChange(7)}
+            >
+              7
+            </button>
+            <button
+              className={`${currentPage === 8 ? 'text-gray-400' : ''}`}
+              onClick={() => onPageChange(8)}
+            >
+              8
+            </button>
+            <button
+              className={`${currentPage === 9 ? 'text-gray-400' : ''}`}
+              onClick={() => onPageChange(9)}
+            >
+              9
+            </button> */}
+          </div>
+          <ThemeSelector />
+        </>
         {children}
       </body>
     </html>
