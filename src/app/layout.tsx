@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Script from 'next/script';
 import ThemeSelector from './ThemeSelector';
+import Link from 'next/link';
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -44,7 +45,8 @@ export default function RootLayout({
       >
         <>
           <div className="text-primary flex justify-center gap-2 p-4">
-            <h1>Layout Page</h1>
+            <Link href="/">Home</Link>
+            <Link href="/layouts">Layouts</Link>
             {/* <button
               className={`${currentPage === 1 ? 'text-gray-400' : ''}`}
               onClick={() => onPageChange(1)}

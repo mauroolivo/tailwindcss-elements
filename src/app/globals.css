@@ -20,7 +20,7 @@
 /* Dark Mode */
 [data-theme='dark'] {
   --color-bgmain: oklch(0.13 0.028 261.692);
-  --color-primary: #60a5fa;
+  --color-primary: #ffffff;
   --color-secondary: #34d399;
   --color-text: #f9fafb;
   --color-surface: #1f2937;
@@ -59,7 +59,7 @@
 
 @layer base {
   h1 {
-    font-size: var(--text-4xl);
+    /* font-size: var(--text-4xl); */
     color: var(--color-primary);
   }
   h2 {
