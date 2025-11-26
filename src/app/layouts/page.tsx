@@ -1,3 +1,4 @@
+import Image from 'next/image';
 export default function Root() {
   return (
     <>
@@ -21,7 +22,7 @@ export default function Root() {
           </div>
         </div>
 
-        <div className="px-4 flex gap-1 flex-col rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-size-[8px_8px] bg-top-left font-mono text-sm leading-6 font-bold text-black/10 md:flex-row md:gap-6 dark:text-white/12.5">
+        <div className="flex flex-col gap-1 rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-size-[8px_8px] bg-top-left px-4 font-mono text-sm leading-6 font-bold text-black/10 md:flex-row md:gap-6 dark:text-white/12.5">
           <aside className="order-3 flex items-center justify-center rounded-lg bg-blue-500 p-4 text-white md:order-1 md:w-1/4">
             01
           </aside>
@@ -61,6 +62,30 @@ export default function Root() {
             </div>
             <div className="flex w-32 flex-auto items-center justify-center rounded-lg bg-violet-500 p-4">
               03
+            </div>
+          </div>
+        </div>
+
+        <div className="mx-4">
+          <div className="overflow-hidden rounded-3xl">
+            <div className="flex h-[280px] justify-center bg-[url('/forest.jpg')] bg-cover bg-center p-4 lg:h-[220px] lg:items-center lg:justify-between lg:p-6">
+              <div className="flex w-full max-w-[788px] flex-col items-center justify-center gap-4 rounded-3xl bg-white/10 p-6 backdrop-blur-xl lg:h-full lg:flex-row lg:justify-between lg:gap-6">
+                <div className="text-center lg:text-left">
+                  <Image
+                    src="/blackfriday.svg"
+                    alt="BLACK FRIDAY 50% OFF"
+                    className="mb-3 h-auto w-full max-w-[400px] lg:max-w-[659px]"
+                    width={650}
+                    height={100}
+                  />
+                  <p className="max-w-lg text-sm text-white lg:text-base">
+                    Use code BLACKFRIDAY at checkout to get 50% off your
+                  </p>
+                </div>
+                <button className="ml-4 rounded-full bg-neutral-800 px-6 py-3 font-semibold whitespace-nowrap text-white transition-colors hover:bg-neutral-700">
+                  claim offer
+                </button>
+              </div>
             </div>
           </div>
         </div>
