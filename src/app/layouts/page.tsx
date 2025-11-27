@@ -1,10 +1,13 @@
 import Image from 'next/image';
+import ScreenSize from '../components/ScreenSize';
 export default function Root() {
   return (
     <>
       <div className="space-y-4">
         <div className="container mx-auto px-4">
-          <div className="col-start-1 row-start-1 h-24 rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-size-[8px_8px] bg-top-left text-black/10 dark:text-white/12.5"></div>
+          <div className="flex h-24 items-center justify-center rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-size-[8px_8px] bg-left-top text-black/10 dark:text-white/[0.125]">
+            <ScreenSize />
+          </div>
         </div>
 
         <div className="grid grid-cols-1">
@@ -66,7 +69,7 @@ export default function Root() {
           </div>
         </div>
 
-        <div className="mx-4">
+        <div className="m-4">
           <div className="overflow-hidden rounded-3xl">
             <div className="flex h-[280px] justify-center bg-[url('/forest.jpg')] bg-cover bg-center p-4 lg:h-[220px] lg:items-center lg:justify-between lg:p-6">
               <div className="flex w-full max-w-[788px] flex-col items-center justify-center gap-4 rounded-3xl bg-white/10 p-6 backdrop-blur-xl lg:h-full lg:flex-row lg:justify-between lg:gap-6">
@@ -90,6 +93,21 @@ export default function Root() {
           </div>
         </div>
       </div>
+
+      
+        <div className="grid grid-cols-4 gap-4 rounded-lg text-center font-mono text-sm leading-6 font-bold text-white">
+          <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">01</div>
+          <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">02</div>
+          <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">03</div>
+          <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">04</div>
+          <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">05</div>
+          <div className="col-span-3 grid grid-cols-subgrid gap-4">
+            <div className="rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-[size:8px_8px] bg-top-left p-4 text-black/10 dark:text-white/12.5"></div>
+            <div className="rounded-lg bg-pink-500 p-4">06</div>
+            <div className="rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-[size:8px_8px] bg-top-left p-4 text-black/10 dark:text-white/12.5"></div>
+          </div>
+        </div>
+      
     </>
   );
 }
