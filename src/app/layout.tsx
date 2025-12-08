@@ -47,6 +47,7 @@ export default function RootLayout({
           <div className="text-primary flex justify-center gap-2 p-4">
             <Link href="/">Home</Link>
             <Link href="/layouts">Layouts</Link>
+            <Link href="/layouts2">Layouts2</Link>
             {/* <button
               className={`${currentPage === 1 ? 'text-gray-400' : ''}`}
               onClick={() => onPageChange(1)}
