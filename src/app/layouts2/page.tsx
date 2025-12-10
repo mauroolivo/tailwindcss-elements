@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import ScreenSize from '../components/ScreenSize';
+import ExpandableTrio from '../components/ExpandableTrio';
 import IconExchange from '../components/IconExchange';
 export default function Root() {
   return (
@@ -26,7 +27,7 @@ export default function Root() {
           </div>
         </div> */}
 
-        <div id="pippo" className="relative space-y-2">
+        <div className="relative space-y-2">
           <div className="mx-auto grid max-w-3xl grid-cols-1 grid-rows-1">
             <div className="col-start-1 row-start-1 rounded-lg border border-gray-500 text-black/10 dark:text-white/12.5"></div>
 
@@ -84,7 +85,7 @@ export default function Root() {
             <div className="bg-bgmain h-16 w-16 rounded-full border border-gray-500"></div>
             <div className="bg-bgmain absolute h-2 w-24"></div>
             <div className="absolute h-12 w-12 rounded-full border border-gray-500"></div>
-            <div className="absolute h-10 w-10 ">
+            <div className="absolute h-10 w-10">
               <IconExchange />
             </div>
           </div>
@@ -96,6 +97,48 @@ export default function Root() {
             <div className="h-12 w-24 rounded-tl-full rounded-tr-full border border-gray-500 bg-black"></div>
           </div> */}
         </div>
+
+        <div className="mx-auto max-w-3xl space-y-2">
+          <div className="items-top flex rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-size-[8px_8px] bg-top-left text-black/10 dark:text-white/12.5">
+            <div className="text-text shrink-0 rounded-lg bg-amber-400/10 px-4 py-2 text-center text-sm italic">
+              <Image
+                src="/BTC.svg"
+                alt=""
+                className="inline-block h-16 w-16 opacity-50"
+                width={256}
+                height={256}
+              />
+            </div>
+            <div className="text-text bg-text/10 mx-auto flex-1 rounded-lg px-4 py-2 text-left">
+              <p className="text-text text-lg font-bold">Text LEFT</p>
+              <p>Loremo ipsum</p>
+            </div>
+            <div className="text-text shrink-0 rounded-lg bg-emerald-400/10 px-4 py-2 text-center text-sm italic">
+              1.00 €
+            </div>
+          </div>
+          <div className="items-top flex rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-size-[8px_8px] bg-top-left text-black/10 dark:text-white/12.5">
+            <div className="text-text shrink-0 rounded-lg bg-amber-400/10 px-4 py-2 text-center text-sm italic">
+              <Image
+                src="/ETH.svg"
+                alt=""
+                className="inline-block h-16 w-16 opacity-50"
+                width={256}
+                height={256}
+              />
+            </div>
+            <div className="text-text bg-text/10 mx-auto flex-1 rounded-lg px-4 py-2 text-left">
+              <p className="text-text text-lg font-bold">Text LEFT</p>
+              <p>Loremo ipsum</p>
+            </div>
+            <div className="text-text shrink-0 rounded-lg bg-emerald-400/10 px-4 py-2 text-center text-sm italic">
+              3,000,000.00 €
+            </div>
+          </div>
+        </div>
+
+        <ExpandableTrio />
+
       </div>
     </>
   );
