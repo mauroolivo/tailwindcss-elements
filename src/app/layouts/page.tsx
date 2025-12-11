@@ -5,13 +5,13 @@ export default function Root() {
     <>
       <div className="space-y-4">
         <div className="container mx-auto px-4">
-          <div className="flex h-24 items-center justify-center rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-size-[8px_8px] bg-top-left text-black/10 dark:text-white/12.5">
+          <div className="flex h-24 items-center justify-center rounded-lg border striped-bg text-black/10 dark:text-white/12.5">
             <ScreenSize />
           </div>
         </div>
 
         <div className="grid grid-cols-1">
-          <div className="col-start-1 row-start-1 rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-size-[8px_8px] bg-top-left text-black/10 dark:text-white/12.5"></div>
+          <div className="col-start-1 row-start-1 rounded-lg border striped-bg text-black/10 dark:text-white/12.5"></div>
           <div className="col-start-1 row-start-1 flex gap-4 rounded-lg font-mono text-sm leading-6 font-bold text-white">
             <div className="flex h-14 w-14 flex-none items-center justify-center rounded-lg bg-blue-500 p-4">
               01
@@ -25,7 +25,7 @@ export default function Root() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-1 rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-size-[8px_8px] bg-top-left px-4 font-mono text-sm leading-6 font-bold text-black/10 md:flex-row md:gap-6 dark:text-white/12.5">
+        <div className="flex flex-col gap-1 rounded-lg border striped-bg px-4 font-mono text-sm leading-6 font-bold text-black/10 md:flex-row md:gap-6 dark:text-white/12.5">
           <aside className="order-3 flex items-center justify-center rounded-lg bg-blue-500 p-4 text-white md:order-1 md:w-1/4">
             01
           </aside>
@@ -40,7 +40,7 @@ export default function Root() {
         </div>
 
         <div className="grid grid-cols-1">
-          <div className="col-start-1 row-start-1 rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-size-[8px_8px] bg-top-left text-black/10 dark:text-white/12.5"></div>
+          <div className="col-start-1 row-start-1 rounded-lg border striped-bg text-black/10 dark:text-white/12.5"></div>
           <div className="col-start-1 row-start-1 flex gap-4 rounded-lg font-mono text-sm leading-6 font-bold text-white">
             <div className="flex h-14 w-14 flex-none items-center justify-center rounded-lg bg-blue-300 p-4 dark:bg-blue-800 dark:text-blue-500">
               01
@@ -55,7 +55,7 @@ export default function Root() {
         </div>
 
         <div className="grid grid-cols-1">
-          <div className="col-start-1 row-start-1 rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-size-[8px_8px] bg-top-left text-black/10 dark:text-white/12.5"></div>
+          <div className="col-start-1 row-start-1 rounded-lg border striped-bg text-black/10 dark:text-white/12.5"></div>
           <div className="col-start-1 row-start-1 flex gap-4 rounded-lg font-mono text-sm leading-6 font-bold text-white">
             <div className="flex h-14 w-14 flex-none items-center justify-center rounded-lg bg-violet-300 p-4 dark:bg-violet-800 dark:text-violet-400">
               01
@@ -92,42 +92,41 @@ export default function Root() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="grid grid-cols-4 gap-4 rounded-lg text-center font-mono text-sm leading-6 font-bold text-white">
-        <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">
-          01
-        </div>
-        <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">
-          02
-        </div>
-        <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">
-          03
-        </div>
-        <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">
-          04
-        </div>
-        <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">
-          05
-        </div>
-        <div className="col-span-3 grid grid-cols-subgrid gap-4">
-          <div className="bg-size[:]8px_8px] rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-top-left p-4 text-black/10 dark:text-white/12.5"></div>
-          <div className="rounded-lg bg-pink-500 p-4">06</div>
-          <div className="bg-size[8px_8px] rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-top-left p-4 text-black/10 dark:text-white/12.5"></div>
-        </div>
-      </div>
-
-      <div className="grid max-w-3xl grid-cols-1 mx-auto">
-        <div className="col-start-1 row-start-1 rounded-lg border bg-[image:repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-[size:8px_8px] bg-top-left text-black/10 dark:text-white/12.5"></div>
-        <div className="col-start-1 row-start-1 flex justify-between space-x-4 rounded-lg font-mono text-sm leading-6 font-bold text-white">
-          <div className="flex size-14 shrink-0 items-center justify-center rounded-lg bg-cyan-500">
+        <div className="grid grid-cols-4 gap-4 rounded-lg text-center font-mono text-sm leading-6 font-bold text-white">
+          <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">
             01
           </div>
-          <div className="flex size-14 shrink-0 items-center justify-center rounded-lg bg-cyan-500">
+          <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">
             02
           </div>
-          <div className="flex size-14 shrink-0 items-center justify-center rounded-lg bg-cyan-500">
+          <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">
             03
+          </div>
+          <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">
+            04
+          </div>
+          <div className="rounded-lg bg-indigo-300 p-4 dark:bg-indigo-900">
+            05
+          </div>
+          <div className="col-span-3 grid grid-cols-subgrid gap-4">
+            <div className="bg-size[:]8px_8px] rounded-lg border striped-bg p-4 text-black/10 dark:text-white/12.5"></div>
+            <div className="rounded-lg bg-pink-500 p-4">06</div>
+            <div className="bg-size[8px_8px] rounded-lg border bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-top-left p-4 text-black/10 dark:text-white/12.5"></div>
+          </div>
+        </div>
+
+        <div className="mx-auto grid max-w-3xl grid-cols-1">
+          <div className="col-start-1 row-start-1 rounded-lg border striped-bg text-black/10 dark:text-white/12.5"></div>
+          <div className="col-start-1 row-start-1 flex justify-between space-x-4 rounded-lg font-mono text-sm leading-6 font-bold text-white">
+            <div className="flex size-14 shrink-0 items-center justify-center rounded-lg bg-cyan-500">
+              01
+            </div>
+            <div className="flex size-14 shrink-0 items-center justify-center rounded-lg bg-cyan-500">
+              02
+            </div>
+            <div className="flex size-14 shrink-0 items-center justify-center rounded-lg bg-cyan-500">
+              03
+            </div>
           </div>
         </div>
       </div>

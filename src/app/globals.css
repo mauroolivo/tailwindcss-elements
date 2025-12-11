@@ -81,4 +81,7 @@
     margin: 1rem;
     box-shadow: var(--shadow-xl);
   }
+  .striped-bg {
+    @apply bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-size-[8px_8px] bg-top-left;
+  }
 }
