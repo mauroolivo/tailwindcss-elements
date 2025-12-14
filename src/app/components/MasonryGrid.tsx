@@ -72,7 +72,7 @@ export default function MasonryGrid() {
       {/* Masonry via CSS Grid with row-based ordering */}
       <div
         ref={containerRef}
-        className="grid [grid-auto-rows:8px] grid-cols-1 gap-4 transition-all duration-300 ease-out sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        className="grid auto-rows-[8px] grid-cols-1 gap-4 transition-all duration-300 ease-out sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
       >
         {Array.from({ length: 20 }).map((_, i) => (
           <div

@@ -1,5 +1,6 @@
 import ScreenSize from '../components/ScreenSize';
 import MasonryGrid from '../components/MasonryGrid';
+
 export default function Root() {
   return (
     <>
@@ -9,8 +10,7 @@ export default function Root() {
             <ScreenSize />
           </div>
         </div>
-
-        <div id="pippo" className="container mx-auto px-4">
+        <div className="container mx-auto space-y-6 px-4">
           <MasonryGrid />
         </div>
       </div>

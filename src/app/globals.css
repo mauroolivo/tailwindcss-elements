@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url(form.css);
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
@@ -31,6 +32,7 @@
   --color-my-pippo: oklch(0.72 0.11 178);
   --font-roboto: 'Roboto', sans-serif;
   --font-oswald: 'Oswald', sans-serif;
+  --font-inter: 'Inter', sans-serif;
   --color-super-green: color(display-p3 0.2824 0.8353 0.5922);
 
   --animate-fade-in-scale: fade-in-scale 3s ease-out;
@@ -59,8 +61,19 @@
 
 @layer base {
   h1 {
-    /* font-size: var(--text-4xl); */
     color: var(--color-primary);
+    font-family: --var(--font-inter);
+    font-weight: 400;
+    /* font-feature-settings: normal; */
+    font-variant-ligatures: normal;
+    /* Optional: pin optical size to avoid axis switching */
+    font-variation-settings: 'opsz' 28;
+    font-feature-settings:
+      'ss01' off,
+      /* stylistic set 1 off */ 'ss02' off,
+      'ss03' off,
+      'cv09' 0,
+      /* character variant off */ 'cv10' 0;
   }
   h2 {
     font-size: var(--text-xl);
@@ -68,6 +81,8 @@
   h3 {
     font-size: var(--text-lg);
   }
+
+  /* Force double-storey 'a' for fonts with alternates (e.g., Inter) */
 }
 
 @layer components {
