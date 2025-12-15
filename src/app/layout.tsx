@@ -1,8 +1,18 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import {
+  Geist,
+  Geist_Mono,
+  Lora,
+  Roboto,
+  Montserrat,
+  Mulish,
+  Inter,
+} from 'next/font/google';
+
 import './globals.css';
 import Script from 'next/script';
 import { Header } from './Header';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -10,6 +20,31 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
+
+const lora = Lora({
+  variable: '--font-lora',
+  subsets: ['latin'],
+});
+
+const roboto = Roboto({
+  variable: '--font-roboto',
+  subsets: ['latin'],
+});
+
+const montserrat = Montserrat({
+  variable: '--font-montserrat',
+  subsets: ['latin'],
+});
+
+const mulish = Mulish({
+  variable: '--font-mulish',
+  subsets: ['latin'],
+});
+
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
 });
 
@@ -40,10 +75,10 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-bgmain antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${lora.variable} ${roboto.variable} ${montserrat.variable} ${mulish.variable} ${inter.variable} bg-bgmain antialiased`}
       >
         <Header />
-        <div className='mt-14'>{children}</div>
+        <div className="mt-14">{children}</div>
       </body>
     </html>
   );
