@@ -8,12 +8,16 @@ export default function Page() {
           <h1 className="px-2 text-4xl tracking-tighter text-balance max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl">
             Chancellor on Brink of Second Bailout for Banks
           </h1>
-          <h1 className="px-2 text-4xl text-blue-900 tracking-tighter text-balance max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl">
+          <h1 className="px-2 text-4xl tracking-tighter text-balance text-blue-900 max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl">
+            Buckle your seatbelt, Dorothy, &apos;cause Kansas is going bye-bye
+          </h1>
+          <h1 className="font-inter text-text/30 px-2 text-2xl tracking-tighter text-balance max-lg:font-medium max-sm:px-4">
             Chancellor on Brink of Second Bailout for Banks
           </h1>
-          <h1 className="font-inter  text-text/30 px-2 text-4xl tracking-tighter text-balance max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl">
-            Chancellor on Brink of Second Bailout for Banks
+          <h1 className="px-2 text-4xl tracking-tighter text-balance text-emerald-700 max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl">
+            Value Flows to Scarcity
           </h1>
+
           {/* <div className="text-text m-72 space-y-4 text-5xl">
             <p className="font-sans">
               Chancellor on Brink of Second Bailout for Banks
