@@ -1,5 +1,5 @@
-import ScreenSize from '../components/ScreenSize';
-import MasonryGrid from '../components/MasonryGrid';
+import ScreenSize from '@/components/ScreenSize';
+import MasonryGrid from '@/components/MasonryGrid';
 
 export default function Root() {
   return (

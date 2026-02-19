@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import ScreenSize from '../components/ScreenSize';
-import ExpandableTrio from '../components/ExpandableTrio';
-import IconExchange from '../components/IconExchange';
+import ScreenSize from '@/components/ScreenSize';
+import ExpandableTrio from '@/components/ExpandableTrio';
+import IconExchange from '@/components/IconExchange';
 export default function Root() {
   return (
     <>

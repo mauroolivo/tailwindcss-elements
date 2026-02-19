@@ -1,6 +1,6 @@
-'use client';
-import Link from 'next/link';
-import ThemeSelector from './ThemeSelector';
+"use client";
+import Link from "next/link";
+import ThemeSelector from "./ThemeSelector";
 
 export function Header() {
   return (

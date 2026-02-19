@@ -11,7 +11,7 @@ import {
 
 import './globals.css';
 import Script from 'next/script';
-import { Header } from './Header';
+import { Header } from '@/components/Header';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',

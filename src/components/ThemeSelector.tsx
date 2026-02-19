@@ -1,7 +1,7 @@
 'use client';
 
-import IconThemeDark from "./components/IconThemeDark";
-import IconThemeLight from "./components/IconThemeLight";
+import IconThemeDark from "./IconThemeDark";
+import IconThemeLight from "./IconThemeLight";
 
 function ThemeSelector() {
   return (
