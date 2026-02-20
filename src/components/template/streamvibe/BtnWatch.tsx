@@ -1,26 +1,17 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 export default function BtnWatch() {
   const [clicked, setClicked] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => {
-    return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
-  }, []);
-
-  const handleClick = () => {
-    setClicked(true);
-    timeoutRef.current = setTimeout(() => setClicked(false), 220);
-  };
+  const handleClick = () => setClicked(true);
 
   return (
     <button
       type="button"
       onClick={handleClick}
+      onAnimationEnd={() => setClicked(false)}
       style={{
         transition:
           "background-color 300ms ease-in-out, opacity 300ms ease-in-out",
@@ -37,10 +28,15 @@ export default function BtnWatch() {
           alt="triangle right"
           width={28}
           height={28}
-          className="transition-opacity duration-300 ease-in-out group-hover:opacity-90 group-active:opacity-80"
+          onAnimationEnd={() => setClicked(false)}
+          className={`transition-opacity duration-300 ease-in-out group-hover:opacity-90 group-active:opacity-80 ${
+            clicked ? "sv-fade-click" : ""
+          }`}
         />
       </span>
-      <span className="select-none font-['Manrope'] text-sm leading-5 font-semibold text-white">
+      <span
+        className={`select-none font-['Manrope'] text-sm leading-5 font-semibold text-white ${clicked ? "sv-fade-click" : ""}`}
+      >
         Start Watching Now
       </span>
     </button>

@@ -3,27 +3,17 @@ import ExploreCard from '@/components/template/streamvibe/ExploreCard';
 import GridRow from '@/components/template/streamvibe/GridRow';
 import Navi from '@/components/template/streamvibe/Navi';
 import Image from 'next/image';
-
+import { imgs_row_1, imgs_row_2, imgs_row_3, imgs_row_4 } from '@/data/streamvibe-model';
 export default function Page() {
-  const imgs_row_1 = [
-    '1_1',
-    '1_2',
-    '1_3',
-    '1_4',
-    '1_5',
-    '1_6',
-    '1_7',
-    '1_8',
-    '1_9',
-  ];
+
   return (
-    <div className="relative h-[4381px] w-[1440px] overflow-hidden bg-neutral-900">
+    <div className="mx-auto relative h-[4381px] w-[1440px] overflow-hidden bg-neutral-900">
       <div className="absolute top-0 left-0 inline-flex w-[1440px] flex-col items-center justify-start">
         <div className="relative flex h-[699px] flex-col items-start justify-start gap-2.5 self-stretch overflow-hidden">
           <GridRow images={imgs_row_1} />
-          <GridRow images={imgs_row_1} />
-          <GridRow images={imgs_row_1} />
-          <GridRow images={imgs_row_1} />
+          <GridRow images={imgs_row_2} />
+          <GridRow images={imgs_row_3} />
+          <GridRow images={imgs_row_4} />
           <Image
             className="absolute -top-20 left-0 h-[860px] w-[1920px] rounded-xl bg-blend-overlay mix-blend-overlay"
             src="/template/streamvibe/bg_1.svg"
@@ -31,8 +21,8 @@ export default function Page() {
             width={1920}
             height={860}
           />
-          <div className="absolute top-0 left-0 h-[581px] w-[1440px] bg-gradient-to-b from-neutral-900 to-neutral-900/0" />
-          <div className="absolute top-[118px] left-0 h-[581px] w-[1440px] bg-gradient-to-b from-neutral-900/0 to-neutral-900" />
+          <div className="absolute top-0 left-0 h-[581px] w-[1440px] bg-linear-to-b from-neutral-900 to-neutral-900/0" />
+          <div className="absolute top-[118px] left-0 h-[581px] w-[1440px] bg-linear-to-b from-neutral-900/0 to-neutral-900" />
 
           <div className="absolute inset-0 flex items-center justify-center">
             <Image
@@ -42,12 +32,6 @@ export default function Page() {
               height={300}
             />
           </div>
-          {/* <div className="absolute top-[199px] left-[570px] size-72">
-            <div className="absolute top-0 left-0 size-72 border border-white/0 bg-gradient-to-b from-white/20 to-white/30 backdrop-blur-[6px]" />
-            <div className="absolute top-[99.45px] left-[104.07px] size-24 overflow-hidden">
-              <div className="from 15% via 43% absolute top-[16.01px] left-[19.08px] size-16 border border-white/0 bg-gradient-to-b from-white/30 via-white/20 to-blue-700/0 backdrop-blur-[6px]" />
-            </div>
-          </div> */}
         </div>
         <div className="flex flex-col items-center justify-start gap-10 self-stretch px-36">
           <div className="flex flex-col items-start justify-start gap-2.5 self-stretch">
@@ -90,9 +74,9 @@ export default function Page() {
               <div className="h-1 flex-1 rounded-[100px] bg-zinc-800" />
               <div className="h-1 flex-1 rounded-[100px] bg-zinc-800" />
             </div>
-            <div className="size- flex items-start justify-start gap-2.5 rounded-md bg-zinc-900 p-2.5 outline outline-1 outline-offset-[-1px] outline-stone-900">
+            <div className="size- flex items-start justify-start gap-2.5 rounded-md bg-zinc-900 p-2.5 outline -outline-offset-1 outline-stone-900">
               <div className="relative size-6 overflow-hidden">
-                <div className="absolute top-[4.50px] left-[3px] h-3.5 w-4 outline outline-[1.50px] outline-offset-[-0.75px] outline-white" />
+                <div className="absolute top-[4.50px] left-[3px] h-3.5 w-4 outline outline-offset-[-0.75px] outline-white" />
               </div>
             </div>
           </div>

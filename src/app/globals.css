@@ -95,4 +95,19 @@
   .striped-bg {
     @apply bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)] bg-size-[8px_8px] bg-top-left;
   }
+  .sv-fade-click {
+    animation: sv-fade 600ms ease-in-out;
+  }
+
+  @keyframes sv-fade {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
