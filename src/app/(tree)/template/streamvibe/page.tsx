@@ -1,5 +1,7 @@
+import BtnWatch from '@/components/template/streamvibe/BtnWatch';
 import ExploreCard from '@/components/template/streamvibe/ExploreCard';
 import GridRow from '@/components/template/streamvibe/GridRow';
+import Navi from '@/components/template/streamvibe/Navi';
 import Image from 'next/image';
 
 export default function Page() {
@@ -61,51 +63,10 @@ export default function Page() {
               the content you want to watch.
             </div>
           </div>
-          <div className="size- inline-flex items-center justify-start gap-1 rounded-lg bg-red-600 px-6 py-3.5">
-            <div className="relative size-6 overflow-hidden">
-              <div className="absolute top-[3.78px] left-[4.50px] size-4 bg-white" />
-            </div>
-            <div className="justify-start font-['Manrope'] text-sm leading-5 font-semibold text-white">
-              Start Watching Now
-            </div>
-          </div>
+          <BtnWatch />
         </div>
       </div>
-      <div className="absolute top-0 left-[1px] inline-flex w-[1439px] items-center justify-between px-20 py-6">
-        <div className="relative h-12 w-40">
-          <div className="absolute top-0 left-0 size-12">
-            <div className="absolute top-0 left-0 size-12 bg-red-600" />
-            <div className="absolute top-[16.57px] left-[17.35px] size-4 overflow-hidden">
-              <div className="absolute top-[2.67px] left-[3.18px] h-3 w-2.5 bg-white" />
-            </div>
-          </div>
-          <div className="absolute top-[16.67px] left-[52.50px] h-4 w-28 bg-white" />
-        </div>
-        <div className="size- flex items-center justify-start gap-3.5">
-          <div className="relative size-6 overflow-hidden">
-            <div className="absolute top-[3px] left-[3px] size-4 outline outline-[1.50px] outline-offset-[-0.75px] outline-white" />
-          </div>
-          <div className="relative size-6 overflow-hidden">
-            <div className="absolute top-[3px] left-[3.69px] size-4 outline outline-[1.50px] outline-offset-[-0.75px] outline-white" />
-          </div>
-        </div>
-        <div className="size- absolute top-[18px] left-[514px] flex items-center justify-start gap-4 overflow-hidden rounded-[10px] bg-stone-950 py-2 pr-7 pl-2 outline outline-[3px] outline-stone-900">
-          <div className="size- flex items-center justify-start gap-2.5 rounded-lg bg-zinc-900 px-5 py-3 outline outline-1 outline-offset-[-1px] outline-zinc-900">
-            <div className="justify-start font-['Manrope'] text-sm leading-5 font-medium text-white">
-              Home
-            </div>
-          </div>
-          <div className="justify-start font-['Manrope'] text-sm leading-5 font-normal text-stone-300">
-            Movies &amp; Shows
-          </div>
-          <div className="justify-start font-['Manrope'] text-sm leading-5 font-normal text-stone-300">
-            Support
-          </div>
-          <div className="justify-start font-['Manrope'] text-sm leading-5 font-normal text-stone-300">
-            Subscriptions
-          </div>
-        </div>
-      </div>
+      <Navi />
       <div className="absolute top-[986px] left-[81px] inline-flex w-[1279px] flex-col items-start justify-start gap-14">
         <div className="inline-flex items-end justify-start gap-20 self-stretch">
           <div className="inline-flex flex-1 flex-col items-start justify-start gap-2.5">
