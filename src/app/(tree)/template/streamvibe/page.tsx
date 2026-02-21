@@ -4,16 +4,17 @@ import GridRow from '@/components/template/streamvibe/GridRow';
 import Navi from '@/components/template/streamvibe/Navi';
 import Image from 'next/image';
 import { imgs_row_1, imgs_row_2, imgs_row_3, imgs_row_4 } from '@/data/streamvibe-model';
+import GridRowLast from '@/components/template/streamvibe/GridRowLast';
 export default function Page() {
 
   return (
-    <div className="mx-auto relative h-[4381px] w-[1440px] overflow-hidden bg-neutral-900">
+    <div className="relative mx-auto h-[4381px] w-[1440px] overflow-hidden bg-neutral-900">
       <div className="absolute top-0 left-0 inline-flex w-[1440px] flex-col items-center justify-start">
         <div className="relative flex h-[699px] flex-col items-start justify-start gap-2.5 self-stretch overflow-hidden">
           <GridRow images={imgs_row_1} />
           <GridRow images={imgs_row_2} />
           <GridRow images={imgs_row_3} />
-          <GridRow images={imgs_row_4} />
+          <GridRowLast images={imgs_row_4} />
           <Image
             className="absolute -top-20 left-0 h-[860px] w-[1920px] rounded-xl bg-blend-overlay mix-blend-overlay"
             src="/template/streamvibe/bg_1.svg"
