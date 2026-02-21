@@ -74,3 +74,53 @@ export const service_cards = [
     hint: "StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store",
   },
 ];
+export const faq_items = [
+  {
+    order: "01",
+    question: "What is StreamVibe?",
+    answer:
+      "StreamVibe is a streaming service that allows you to watch movies and shows on demand.",
+  },
+  {
+    order: "02",
+    question: "How much does StreamVibe cost?",
+    answer:
+      "StreamVibe offers a variety of subscription plans to fit your needs. Our basic plan starts at $9.99 per month, while our premium plan offers additional features for $14.99 per month.",
+  },
+  {
+    order: "03",
+    question: "What content is available on StreamVibe?",
+    answer:
+      "StreamVibe offers a wide range of movies and TV shows across various genres, including action, comedy, drama, horror, and more. We also have a growing library of original content that you won’t find anywhere else.",
+  },
+  {
+    order: "04",
+    question: "How can I watch StreamVibe?",
+    answer:
+      "You can watch StreamVibe on a variety of devices, including smartphones, tablets, smart TVs, laptops, gaming consoles, and VR headsets. Simply download our app or visit our website to get started.",
+  },
+  {
+    order: "05",
+    question: "Can I download content for offline viewing?",
+    answer:
+      "Yes, StreamVibe allows you to download select movies and TV shows for offline viewing. This feature is available on our mobile app and some smart TVs.",
+  },
+  {
+    order: "06",
+    question: "Is there a free trial available?",
+    answer:
+      "Yes, we offer a 7-day free trial for new users. During the trial period, you can access all of our content and features without any restrictions. Just sign up with your email address and start streaming!",
+  },
+  {
+    order: "07",
+    question: "Can I share my StreamVibe account with others?",
+    answer:
+      "Yes, StreamVibe allows you to create multiple profiles under one account, so you can share your subscription with family and friends. Each profile has its own personalized recommendations and watch history.",
+  },
+  {
+    order: "08",
+    question: "What if I have issues with the service?",
+    answer:
+      "If you encounter any issues with StreamVibe, our customer support team is here to help. You can contact us through our website or app, and we will do our best to resolve any problems you may have.",
+  },
+];

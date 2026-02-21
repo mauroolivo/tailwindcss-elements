@@ -79,6 +79,12 @@
   }
 
   /* Force double-storey 'a' for fonts with alternates (e.g., Inter) */
+
+  /* StreamVibe: FAQ divider gradient */
+  .sv-faq-gradient {
+    background: linear-gradient(90deg, transparent 0%, #e50000 20%, #e50000 80%, transparent 100%);
+  }
+
 }
 
 @layer components {
