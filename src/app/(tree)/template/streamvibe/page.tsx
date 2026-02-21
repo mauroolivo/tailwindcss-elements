@@ -5,6 +5,7 @@ import Navi from '@/components/template/streamvibe/Navi';
 import Image from 'next/image';
 import ServiceSection from '@/components/template/streamvibe/ServiceSection';
 import FaqSection from '@/components/template/streamvibe/FaqSection';
+import CategorySection from '@/components/template/streamvibe/CategorySection';
 import {
   imgs_row_1,
   imgs_row_2,
@@ -14,22 +15,30 @@ import {
 import GridRowLast from '@/components/template/streamvibe/GridRowLast';
 export default function Page() {
   return (
-    <div className="relative mx-auto h-[4381px] w-[1440px] overflow-hidden bg-neutral-900">
-      <div className="absolute top-0 left-0 inline-flex w-[1440px] flex-col items-center justify-start">
-        <div className="relative flex h-[699px] flex-col items-start justify-start gap-2.5 self-stretch overflow-hidden">
+    <div className="mx-auto overflow-hidden bg-black">
+      <div className="relative left-1/2 flex min-w-[1440px] -translate-x-1/2 flex-col items-start justify-start gap-2.5 overflow-hidden">
+        <div className="relative flex flex-col items-start justify-start gap-2.5 self-stretch overflow-hidden">
           <GridRow images={imgs_row_1} />
           <GridRow images={imgs_row_2} />
           <GridRow images={imgs_row_3} />
           <GridRowLast images={imgs_row_4} />
-          <Image
-            className="absolute -top-20 left-0 h-[860px] w-[1920px] rounded-xl bg-blend-overlay mix-blend-overlay"
-            src="/template/streamvibe/bg_1.svg"
-            alt="background"
-            width={1920}
-            height={860}
+          <div className="absolute inset-0 flex items-center justify-center opacity-30">
+            <Image
+              className="object-cover"
+              src="/template/streamvibe/bg_1.svg"
+              alt="background"
+              fill
+              priority
+            />
+          </div>
+          <div className="absolute top-0 left-0 h-full w-full bg-linear-to-b from-neutral-900 to-neutral-900/0" />
+          <div
+            className="pointer-events-none absolute bottom-0 left-0 h-[400px] w-full"
+            style={{
+              background:
+                'linear-gradient(to top, #000000 0px, rgba(0,0,0,0) 400px)',
+            }}
           />
-          <div className="absolute top-0 left-0 h-[581px] w-[1440px] bg-linear-to-b from-neutral-900 to-neutral-900/0" />
-          <div className="absolute top-[118px] left-0 h-[581px] w-[1440px] bg-linear-to-b from-neutral-900/0 to-neutral-900" />
 
           <div className="absolute inset-0 flex items-center justify-center">
             <Image
@@ -40,75 +49,28 @@ export default function Page() {
             />
           </div>
         </div>
-        <div className="flex flex-col items-center justify-start gap-10 self-stretch px-36">
-          <div className="flex flex-col items-start justify-start gap-2.5 self-stretch">
-            <div className="justify-start self-stretch text-center font-['Manrope'] text-5xl leading-[72px] font-bold text-white">
-              The Best Streaming Experience
-            </div>
-            <div className="justify-start self-stretch text-center font-['Manrope'] text-sm leading-5 font-normal text-neutral-400">
-              StreamVibe is the best streaming experience for watching your
-              favorite movies and shows on demand, anytime, anywhere. With
-              StreamVibe, you can enjoy a wide variety of content, including the
-              latest blockbusters, classic movies, popular TV shows, and more.
-              You can also create your own watchlists, so you can easily find
-              the content you want to watch.
-            </div>
+      </div>
+      <div className="relative top-[-100px] flex flex-col items-center justify-start gap-10 self-stretch px-36">
+        <div className="flex flex-col items-start justify-start gap-2.5 self-stretch">
+          <div className="justify-start self-stretch text-center font-['Manrope'] text-5xl leading-[72px] font-bold text-white">
+            The Best Streaming Experience
           </div>
-          <BtnWatch />
+          <div className="justify-start self-stretch text-center font-['Manrope'] text-sm leading-5 font-normal text-neutral-400">
+            StreamVibe is the best streaming experience for watching your
+            favorite movies and shows on demand, anytime, anywhere. With
+            StreamVibe, you can enjoy a wide variety of content, including the
+            latest blockbusters, classic movies, popular TV shows, and more. You
+            can also create your own watchlists, so you can easily find the
+            content you want to watch.
+          </div>
         </div>
+        <BtnWatch />
       </div>
       <Navi />
-      <div className="absolute top-[986px] left-[81px] inline-flex w-[1279px] flex-col items-start justify-start gap-14">
-        <div className="inline-flex items-end justify-start gap-20 self-stretch">
-          <div className="inline-flex flex-1 flex-col items-start justify-start gap-2.5">
-            <div className="justify-start self-stretch font-['Manrope'] text-3xl leading-10 font-bold text-white">
-              Explore our wide variety of categories
-            </div>
-            <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-              Whether you&apos;re looking for a comedy to make you laugh, a
-              drama to make you think, or a documentary to learn something new
-            </div>
-          </div>
-          <div className="size- flex items-center justify-start gap-3 rounded-[10px] bg-stone-950 p-3 outline -outline-offset-1 outline-stone-900">
-            <div className="size- flex items-start justify-start gap-2.5 rounded-md bg-zinc-900 p-2.5 outline -outline-offset-1 outline-stone-900">
-              <div className="relative size-6 overflow-hidden">
-                <Image
-                  src="/template/streamvibe/icons/arrow_left.svg"
-                  alt="arrow left"
-                  width={24}
-                  height={24}
-                  className=""
-                />
-              </div>
-            </div>
-            <div className="flex w-16 items-start justify-start gap-[3px]">
-              <div className="h-1 w-4 rounded-[100px] bg-red-600" />
-              <div className="h-1 flex-1 rounded-[100px] bg-zinc-800" />
-              <div className="h-1 flex-1 rounded-[100px] bg-zinc-800" />
-              <div className="h-1 flex-1 rounded-[100px] bg-zinc-800" />
-            </div>
-            <div className="size- flex items-start justify-start gap-2.5 rounded-md bg-zinc-900 p-2.5 outline -outline-offset-1 outline-stone-900">
-              <div className="relative size-6 overflow-hidden">
-                <Image
-                  src="/template/streamvibe/icons/arrow_right.svg"
-                  alt="arrow right"
-                  width={24}
-                  height={24}
-                  className=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="inline-flex items-start justify-start gap-5 self-stretch">
-          <ExploreCard title="Action" images={[]} />
-          <ExploreCard title="Adventure" images={[]} />
-          <ExploreCard title="Comedy" images={[]} />
-          <ExploreCard title="Drama" images={[]} />
-          <ExploreCard title="Horror" images={[]} />
-        </div>
-      </div>
-      <ServiceSection />
+
+      <CategorySection />
+
+      {/* <ServiceSection />
       <FaqSection />
       <div className="absolute top-[2986px] left-[80px] inline-flex w-[1280px] flex-col items-start justify-start gap-14">
         <div className="inline-flex items-end justify-start gap-20 self-stretch">
@@ -526,7 +488,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

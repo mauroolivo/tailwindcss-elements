@@ -25,7 +25,7 @@ export default function FaqSection() {
             <>
               <FaqCard
                 key={i}
-                number={item.order}
+                order={item.order}
                 title={item.question}
                 hint={item.answer}
               />
@@ -38,7 +38,7 @@ export default function FaqSection() {
             <>
               <FaqCard
                 key={i}
-                number={item.order}
+                order={item.order}
                 title={item.question}
                 hint={item.answer}
               />

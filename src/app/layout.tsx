@@ -84,7 +84,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${lora.variable} ${roboto.variable} ${montserrat.variable} ${mulish.variable} ${inter.variable} ${manrope.variable} bg-bgmain antialiased`}
       >
-        <Header />
+        {/* <Header /> */}
         <div className="mt-14">{children}</div>
       </body>
     </html>
