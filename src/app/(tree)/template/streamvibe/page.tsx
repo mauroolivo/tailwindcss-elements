@@ -3,10 +3,16 @@ import ExploreCard from '@/components/template/streamvibe/ExploreCard';
 import GridRow from '@/components/template/streamvibe/GridRow';
 import Navi from '@/components/template/streamvibe/Navi';
 import Image from 'next/image';
-import { imgs_row_1, imgs_row_2, imgs_row_3, imgs_row_4 } from '@/data/streamvibe-model';
+import ServiceSection from '@/components/template/streamvibe/ServiceSection';
+import FaqSection from '@/components/template/streamvibe/FaqSection';
+import {
+  imgs_row_1,
+  imgs_row_2,
+  imgs_row_3,
+  imgs_row_4,
+} from '@/data/streamvibe-model';
 import GridRowLast from '@/components/template/streamvibe/GridRowLast';
 export default function Page() {
-
   return (
     <div className="relative mx-auto h-[4381px] w-[1440px] overflow-hidden bg-neutral-900">
       <div className="absolute top-0 left-0 inline-flex w-[1440px] flex-col items-center justify-start">
@@ -63,10 +69,16 @@ export default function Page() {
               drama to make you think, or a documentary to learn something new
             </div>
           </div>
-          <div className="size- flex items-center justify-start gap-3 rounded-[10px] bg-stone-950 p-3 outline outline-1 outline-offset-[-1px] outline-stone-900">
-            <div className="size- flex items-start justify-start gap-2.5 rounded-md bg-zinc-900 p-2.5 outline outline-1 outline-offset-[-1px] outline-stone-900">
+          <div className="size- flex items-center justify-start gap-3 rounded-[10px] bg-stone-950 p-3 outline -outline-offset-1 outline-stone-900">
+            <div className="size- flex items-start justify-start gap-2.5 rounded-md bg-zinc-900 p-2.5 outline -outline-offset-1 outline-stone-900">
               <div className="relative size-6 overflow-hidden">
-                <div className="absolute top-[5.25px] left-[4.50px] size-3.5 outline outline-[1.50px] outline-offset-[-0.75px] outline-white" />
+                <Image
+                  src="/template/streamvibe/icons/arrow_left.svg"
+                  alt="arrow left"
+                  width={24}
+                  height={24}
+                  className=""
+                />
               </div>
             </div>
             <div className="flex w-16 items-start justify-start gap-[3px]">
@@ -77,7 +89,13 @@ export default function Page() {
             </div>
             <div className="size- flex items-start justify-start gap-2.5 rounded-md bg-zinc-900 p-2.5 outline -outline-offset-1 outline-stone-900">
               <div className="relative size-6 overflow-hidden">
-                <div className="absolute top-[4.50px] left-[3px] h-3.5 w-4 outline outline-offset-[-0.75px] outline-white" />
+                <Image
+                  src="/template/streamvibe/icons/arrow_right.svg"
+                  alt="arrow right"
+                  width={24}
+                  height={24}
+                  className=""
+                />
               </div>
             </div>
           </div>
@@ -90,271 +108,8 @@ export default function Page() {
           <ExploreCard title="Horror" images={[]} />
         </div>
       </div>
-      <div className="absolute top-[1524px] left-[81px] inline-flex w-[1279px] flex-col items-start justify-start gap-14">
-        <div className="flex flex-col items-start justify-start gap-2.5 self-stretch pr-36">
-          <div className="justify-start self-stretch font-['Manrope'] text-3xl leading-10 font-bold text-white">
-            We Provide you streaming experience across various devices.
-          </div>
-          <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-            With StreamVibe, you can enjoy your favorite movies and TV shows
-            anytime, anywhere. Our platform is designed to be compatible with a
-            wide range of devices, ensuring that you never miss a moment of
-            entertainment.
-          </div>
-        </div>
-        <div className="flex flex-col items-start justify-start gap-5 self-stretch">
-          <div className="inline-flex items-start justify-start gap-5 self-stretch">
-            <div className="to 81% inline-flex flex-1 flex-col items-start justify-start gap-6 rounded-[10px] bg-linear-140 from-red-600/50 to-red-600/0 p-10 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-              <div className="inline-flex items-center justify-start gap-3 self-stretch">
-                <div className="size- flex items-start justify-start gap-2.5 rounded-[10px] bg-neutral-900 p-3 outline outline-1 outline-offset-[-1px] outline-stone-900">
-                  <div className="relative size-7 overflow-hidden">
-                    <div className="absolute top-[1.20px] left-[7.80px] h-7 w-3.5 overflow-hidden">
-                      <div className="absolute top-0 left-0 h-7 w-3.5 border border-red-600 bg-red-600 backdrop-blur-[6px]" />
-                    </div>
-                  </div>
-                </div>
-                <div className="flex-1 justify-start font-['Manrope'] text-xl leading-8 font-semibold text-white">
-                  Smartphones
-                </div>
-              </div>
-              <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-                StreamVibe is optimized for both Android and iOS smartphones.
-                Download our app from the Google Play Store or the Apple App
-                Store
-              </div>
-            </div>
-            <div className="to 81% inline-flex flex-1 flex-col items-start justify-start gap-6 rounded-[10px] bg-linear-140 from-red-600/50 to-red-600/0 p-10 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-              <div className="inline-flex items-center justify-start gap-3 self-stretch">
-                <div className="size- flex items-start justify-start gap-2.5 rounded-[10px] bg-neutral-900 p-3 outline outline-1 outline-offset-[-1px] outline-stone-900">
-                  <div className="relative size-7 overflow-hidden">
-                    <div className="absolute top-[1.20px] left-[4.80px] h-7 w-5 overflow-hidden">
-                      <div className="absolute top-0 left-0 h-7 w-5 border border-red-600 bg-red-600 backdrop-blur-[6px]" />
-                    </div>
-                  </div>
-                </div>
-                <div className="flex-1 justify-start font-['Manrope'] text-xl leading-8 font-semibold text-white">
-                  Tablet
-                </div>
-              </div>
-              <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-                StreamVibe is optimized for both Android and iOS smartphones.
-                Download our app from the Google Play Store or the Apple App
-                Store
-              </div>
-            </div>
-            <div className="to 81% inline-flex flex-1 flex-col items-start justify-start gap-6 rounded-[10px] bg-linear-140 from-red-600/50 to-red-600/0 p-10 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-              <div className="inline-flex items-center justify-start gap-3 self-stretch">
-                <div className="size- flex items-start justify-start gap-2.5 rounded-[10px] bg-neutral-900 p-3 outline outline-1 outline-offset-[-1px] outline-stone-900">
-                  <div className="relative size-7 overflow-hidden">
-                    <div className="absolute top-[5.10px] left-[2.10px] h-5 w-6 overflow-hidden" />
-                  </div>
-                </div>
-                <div className="flex-1 justify-start font-['Manrope'] text-xl leading-8 font-semibold text-white">
-                  Smart TV
-                </div>
-              </div>
-              <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-                StreamVibe is optimized for both Android and iOS smartphones.
-                Download our app from the Google Play Store or the Apple App
-                Store
-              </div>
-            </div>
-          </div>
-          <div className="inline-flex items-start justify-start gap-5 self-stretch">
-            <div className="to 81% inline-flex flex-1 flex-col items-start justify-start gap-6 rounded-[10px] bg-linear-140 from-red-600/50 to-red-600/0 p-10 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-              <div className="inline-flex items-center justify-start gap-3 self-stretch">
-                <div className="size- flex items-start justify-start gap-2.5 rounded-[10px] bg-neutral-900 p-3 outline outline-1 outline-offset-[-1px] outline-stone-900">
-                  <div className="relative size-7 overflow-hidden">
-                    <div className="absolute top-[4.65px] left-[1.35px] h-5 w-7 overflow-hidden" />
-                  </div>
-                </div>
-                <div className="flex-1 justify-start font-['Manrope'] text-xl leading-8 font-semibold text-white">
-                  Laptops
-                </div>
-              </div>
-              <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-                StreamVibe is optimized for both Android and iOS smartphones.
-                Download our app from the Google Play Store or the Apple App
-                Store
-              </div>
-            </div>
-            <div className="to 81% inline-flex flex-1 flex-col items-start justify-start gap-6 rounded-[10px] bg-linear-140 from-red-600/50 to-red-600/0 p-10 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-              <div className="inline-flex items-center justify-start gap-3 self-stretch">
-                <div className="size- flex items-start justify-start gap-2.5 rounded-[10px] bg-neutral-900 p-3 outline outline-1 outline-offset-[-1px] outline-stone-900">
-                  <div className="relative size-7 overflow-hidden">
-                    <div className="absolute top-[4.80px] left-[1.65px] h-5 w-7 overflow-hidden" />
-                  </div>
-                </div>
-                <div className="flex-1 justify-start font-['Manrope'] text-xl leading-8 font-semibold text-white">
-                  Gaming Consoles
-                </div>
-              </div>
-              <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-                StreamVibe is optimized for both Android and iOS smartphones.
-                Download our app from the Google Play Store or the Apple App
-                Store
-              </div>
-            </div>
-            <div className="to 81% inline-flex flex-1 flex-col items-start justify-start gap-6 rounded-[10px] bg-linear-140 from-red-600/50 to-red-600/0 p-10 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-              <div className="inline-flex items-center justify-start gap-3 self-stretch">
-                <div className="size- flex items-start justify-start gap-2.5 rounded-[10px] bg-neutral-900 p-3 outline outline-1 outline-offset-[-1px] outline-stone-900">
-                  <div className="relative size-7 overflow-hidden">
-                    <div className="absolute top-[5.25px] left-[2.55px] h-5 w-6 overflow-hidden" />
-                  </div>
-                </div>
-                <div className="flex-1 justify-start font-['Manrope'] text-xl leading-8 font-semibold text-white">
-                  VR Headsets{' '}
-                </div>
-              </div>
-              <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-                StreamVibe is optimized for both Android and iOS smartphones.
-                Download our app from the Google Play Store or the Apple App
-                Store
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="absolute top-[2284px] left-[80px] inline-flex w-[1280px] flex-col items-center justify-start gap-14">
-        <div className="inline-flex items-end justify-start gap-20 self-stretch">
-          <div className="inline-flex flex-1 flex-col items-start justify-start gap-2.5">
-            <div className="justify-start self-stretch font-['Manrope'] text-3xl leading-10 font-bold text-white">
-              Frequently Asked Questions
-            </div>
-            <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-              Got questions? We&apos;ve got answers! Check out our FAQ section
-              to find answers to the most common questions about StreamVibe.
-            </div>
-          </div>
-          <div className="size- flex items-start justify-start gap-2.5 rounded-md bg-red-600 px-5 py-3.5">
-            <div className="justify-start font-['Manrope'] text-sm leading-5 font-semibold text-white">
-              Ask a Question
-            </div>
-          </div>
-        </div>
-        <div className="inline-flex items-start justify-start gap-10 self-stretch">
-          <div className="inline-flex flex-1 flex-col items-start justify-start">
-            <div className="inline-flex items-start justify-start gap-4 self-stretch p-6">
-              <div className="size- inline-flex flex-col items-start justify-start gap-2.5 rounded-lg bg-stone-900 p-4 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-                <div className="justify-start font-['Manrope'] text-base font-semibold text-white">
-                  01
-                </div>
-              </div>
-              <div className="inline-flex flex-1 flex-col items-start justify-start gap-3.5 self-stretch">
-                <div className="justify-start self-stretch font-['Manrope'] text-xl leading-8 font-medium text-white">
-                  What is StreamVibe?
-                </div>
-                <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-                  StreamVibe is a streaming service that allows you to watch
-                  movies and shows on demand.
-                </div>
-              </div>
-              <div className="relative size-6 overflow-hidden">
-                <div className="absolute top-[11px] left-[4px] h-0.5 w-4 bg-white" />
-              </div>
-            </div>
-            <div className="h-0 self-stretch outline outline-1 outline-offset-[-0.50px] outline-red-600/0"></div>
-            <div className="inline-flex items-center justify-start gap-4 self-stretch p-6">
-              <div className="size- inline-flex flex-col items-start justify-start gap-2.5 rounded-lg bg-stone-900 p-4 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-                <div className="justify-start font-['Manrope'] text-base font-semibold text-white">
-                  02
-                </div>
-              </div>
-              <div className="flex-1 justify-start font-['Manrope'] text-xl leading-8 font-medium text-white">
-                How much does StreamVibe cost?
-              </div>
-              <div className="relative size-6 overflow-hidden">
-                <div className="absolute top-[4px] left-[4px] size-4 bg-white" />
-              </div>
-            </div>
-            <div className="h-0 self-stretch outline outline-1 outline-offset-[-0.50px] outline-red-600/0"></div>
-            <div className="inline-flex items-center justify-start gap-4 self-stretch p-6">
-              <div className="size- inline-flex flex-col items-start justify-start gap-2.5 rounded-lg bg-stone-900 p-4 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-                <div className="justify-start font-['Manrope'] text-base font-semibold text-white">
-                  03
-                </div>
-              </div>
-              <div className="flex-1 justify-start font-['Manrope'] text-xl leading-8 font-medium text-white">
-                What content is available on StreamVibe?
-              </div>
-              <div className="relative size-6 overflow-hidden">
-                <div className="absolute top-[4px] left-[4px] size-4 bg-white" />
-              </div>
-            </div>
-            <div className="h-0 self-stretch outline outline-1 outline-offset-[-0.50px] outline-red-600/0"></div>
-            <div className="inline-flex items-center justify-start gap-4 self-stretch p-6">
-              <div className="size- inline-flex flex-col items-start justify-start gap-2.5 rounded-lg bg-stone-900 p-4 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-                <div className="justify-start font-['Manrope'] text-base font-semibold text-white">
-                  04
-                </div>
-              </div>
-              <div className="flex-1 justify-start font-['Manrope'] text-xl leading-8 font-medium text-white">
-                How can I watch StreamVibe?
-              </div>
-              <div className="relative size-6 overflow-hidden">
-                <div className="absolute top-[4px] left-[4px] size-4 bg-white" />
-              </div>
-            </div>
-          </div>
-          <div className="inline-flex flex-1 flex-col items-start justify-start">
-            <div className="inline-flex items-center justify-start gap-4 self-stretch p-6">
-              <div className="size- inline-flex flex-col items-start justify-start gap-2.5 rounded-lg bg-stone-900 p-4 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-                <div className="justify-start font-['Manrope'] text-base font-semibold text-white">
-                  05
-                </div>
-              </div>
-              <div className="flex-1 justify-start font-['Manrope'] text-xl leading-8 font-medium text-white">
-                How do I sign up for StreamVibe?
-              </div>
-              <div className="relative size-6 overflow-hidden">
-                <div className="absolute top-[4px] left-[4px] size-4 bg-white" />
-              </div>
-            </div>
-            <div className="h-0 self-stretch outline outline-1 outline-offset-[-0.50px] outline-red-600/0"></div>
-            <div className="inline-flex items-center justify-start gap-4 self-stretch p-6">
-              <div className="size- inline-flex flex-col items-start justify-start gap-2.5 rounded-lg bg-stone-900 p-4 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-                <div className="justify-start font-['Manrope'] text-base font-semibold text-white">
-                  06
-                </div>
-              </div>
-              <div className="flex-1 justify-start font-['Manrope'] text-xl leading-8 font-medium text-white">
-                What is the StreamVibe free trial?
-              </div>
-              <div className="relative size-6 overflow-hidden">
-                <div className="absolute top-[4px] left-[4px] size-4 bg-white" />
-              </div>
-            </div>
-            <div className="h-0 self-stretch outline outline-1 outline-offset-[-0.50px] outline-red-600/0"></div>
-            <div className="inline-flex items-center justify-start gap-4 self-stretch p-6">
-              <div className="size- inline-flex flex-col items-start justify-start gap-2.5 rounded-lg bg-stone-900 p-4 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-                <div className="justify-start font-['Manrope'] text-base font-semibold text-white">
-                  07
-                </div>
-              </div>
-              <div className="flex-1 justify-start font-['Manrope'] text-xl leading-8 font-medium text-white">
-                How do I contact StreamVibe customer support?
-              </div>
-              <div className="relative size-6 overflow-hidden">
-                <div className="absolute top-[4px] left-[4px] size-4 bg-white" />
-              </div>
-            </div>
-            <div className="h-0 self-stretch outline outline-1 outline-offset-[-0.50px] outline-red-600/0"></div>
-            <div className="inline-flex items-center justify-start gap-4 self-stretch p-6">
-              <div className="size- inline-flex flex-col items-start justify-start gap-2.5 rounded-lg bg-stone-900 p-4 outline outline-1 outline-offset-[-1px] outline-neutral-800">
-                <div className="justify-start font-['Manrope'] text-base font-semibold text-white">
-                  08
-                </div>
-              </div>
-              <div className="flex-1 justify-start font-['Manrope'] text-xl leading-8 font-medium text-white">
-                What are the StreamVibe payment methods?
-              </div>
-              <div className="relative size-6 overflow-hidden">
-                <div className="absolute top-[4px] left-[4px] size-4 bg-white" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ServiceSection />
+      <FaqSection />
       <div className="absolute top-[2986px] left-[80px] inline-flex w-[1280px] flex-col items-start justify-start gap-14">
         <div className="inline-flex items-end justify-start gap-20 self-stretch">
           <div className="inline-flex flex-1 flex-col items-start justify-start gap-2.5">
