@@ -1,5 +1,4 @@
 import BtnWatch from '@/components/template/streamvibe/BtnWatch';
-import ExploreCard from '@/components/template/streamvibe/ExploreCard';
 import GridRow from '@/components/template/streamvibe/GridRow';
 import Navi from '@/components/template/streamvibe/Navi';
 import Image from 'next/image';
@@ -74,7 +73,7 @@ export default function Page() {
 
       <FaqSection />
 
-      <div className="pt-16 mx-auto flex w-full max-w-7xl  flex-col items-start justify-start gap-14">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-14 pt-16">
         <div className="inline-flex items-end justify-start gap-20 self-stretch">
           <div className="inline-flex flex-1 flex-col items-start justify-start gap-2.5">
             <div className="justify-start self-stretch font-['Manrope'] text-3xl leading-10 font-bold text-white">
@@ -86,7 +85,7 @@ export default function Page() {
               entertainment!
             </div>
           </div>
-          <div className="size- flex items-center justify-start rounded-lg bg-stone-950 p-2 outline outline-1 outline-offset-[-1px] outline-neutral-800">
+          <div className="size- flex items-center justify-start rounded-lg bg-stone-950 p-2 outline -outline-offset-1 outline-neutral-800">
             <div className="size- flex items-center justify-center gap-2.5 rounded-md bg-stone-900 px-5 py-3">
               <div className="justify-start font-['Manrope'] text-sm leading-5 font-medium text-white">
                 Monthly
@@ -101,7 +100,7 @@ export default function Page() {
         </div>
 
         <div className="inline-flex items-end justify-start gap-20 self-stretch">
-          <div className="inline-flex flex-1 flex-col items-start justify-start gap-10 rounded-[10px] bg-zinc-900 p-10 outline outline-1 outline-offset-[-1px] outline-neutral-800">
+          <div className="inline-flex flex-1 flex-col items-start justify-start gap-10 rounded-[10px] bg-zinc-900 p-10 outline -outline-offset-1 outline-neutral-800">
             <div className="flex flex-col items-start justify-start gap-3 self-stretch">
               <div className="justify-start self-stretch font-['Manrope'] text-xl leading-8 font-bold text-white">
                 Basic Plan
@@ -120,7 +119,7 @@ export default function Page() {
               </div>
             </div>
             <div className="inline-flex items-start justify-start gap-3 self-stretch">
-              <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md bg-neutral-900 px-5 py-3.5 outline outline-1 outline-offset-[-1px] outline-neutral-800">
+              <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md bg-neutral-900 px-5 py-3.5 outline -outline-offset-1 outline-neutral-800">
                 <div className="justify-start font-['Manrope'] text-sm leading-5 font-semibold text-white">
                   Start Free Trial
                 </div>
@@ -132,7 +131,7 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="inline-flex flex-1 flex-col items-start justify-start gap-10 rounded-[10px] bg-zinc-900 p-10 outline outline-1 outline-offset-[-1px] outline-neutral-800">
+          <div className="inline-flex flex-1 flex-col items-start justify-start gap-10 rounded-[10px] bg-zinc-900 p-10 outline -outline-offset-1 outline-neutral-800">
             <div className="flex flex-col items-start justify-start gap-3 self-stretch">
               <div className="justify-start self-stretch font-['Manrope'] text-xl leading-8 font-bold text-white">
                 Standard Plan
@@ -151,7 +150,7 @@ export default function Page() {
               </div>
             </div>
             <div className="inline-flex items-start justify-start gap-3 self-stretch">
-              <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md bg-neutral-900 px-5 py-3.5 outline outline-1 outline-offset-[-1px] outline-neutral-800">
+              <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md bg-neutral-900 px-5 py-3.5 outline -outline-offset-1 outline-neutral-800">
                 <div className="justify-start font-['Manrope'] text-sm leading-5 font-semibold text-white">
                   Start Free Trial
                 </div>
@@ -163,7 +162,7 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="inline-flex flex-1 flex-col items-start justify-start gap-10 rounded-[10px] bg-zinc-900 p-10 outline outline-1 outline-offset-[-1px] outline-neutral-800">
+          <div className="inline-flex flex-1 flex-col items-start justify-start gap-10 rounded-[10px] bg-zinc-900 p-10 outline -outline-offset-1 outline-neutral-800">
             <div className="flex flex-col items-start justify-start gap-3 self-stretch">
               <div className="justify-start self-stretch font-['Manrope'] text-xl leading-8 font-bold text-white">
                 Premium Plan
@@ -182,7 +181,7 @@ export default function Page() {
               </div>
             </div>
             <div className="inline-flex items-start justify-start gap-3 self-stretch">
-              <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md bg-neutral-900 px-5 py-3.5 outline outline-1 outline-offset-[-1px] outline-neutral-800">
+              <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md bg-neutral-900 px-5 py-3.5 outline -outline-offset-1 outline-neutral-800">
                 <div className="justify-start font-['Manrope'] text-sm leading-5 font-semibold text-white">
                   Start Free Trial
                 </div>
