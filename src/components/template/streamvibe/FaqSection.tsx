@@ -1,8 +1,9 @@
+import React from "react";
 import FaqCard from "@/components/template/streamvibe/FaqCard";
 import { faq_items } from "@/data/streamvibe-model";
 export default function FaqSection() {
   return (
-    <div className="absolute top-[2284px] left-20 inline-flex w-7xl flex-col items-center justify-start gap-14">
+    <div className="pt-16 flex max-w-[1440px] mx-auto flex-col items-center justify-start gap-14">
       <div className="inline-flex items-end justify-start gap-20 self-stretch">
         <div className="inline-flex flex-1 flex-col items-start justify-start gap-2.5">
           <div className="justify-start self-stretch font-['Manrope'] text-3xl leading-10 font-bold text-white">
@@ -22,28 +23,26 @@ export default function FaqSection() {
       <div className="inline-flex items-start justify-start gap-10 self-stretch">
         <div className="inline-flex flex-1 flex-col items-start justify-start">
           {faq_items.slice(0, 4).map((item, i) => (
-            <>
+            <React.Fragment key={item.order ?? i}>
               <FaqCard
-                key={i}
                 order={item.order}
                 title={item.question}
                 hint={item.answer}
               />
               {i !== 3 && <div className="sv-faq-gradient h-px self-stretch" />}
-            </>
+            </React.Fragment>
           ))}
         </div>
         <div className="inline-flex flex-1 flex-col items-start justify-start">
           {faq_items.slice(4, 8).map((item, i) => (
-            <>
+            <React.Fragment key={item.order ?? i + 4}>
               <FaqCard
-                key={i}
                 order={item.order}
                 title={item.question}
                 hint={item.answer}
               />
               {i !== 3 && <div className="sv-faq-gradient h-px self-stretch" />}
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>

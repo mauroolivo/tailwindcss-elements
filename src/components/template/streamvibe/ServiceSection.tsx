@@ -3,7 +3,7 @@ import { service_cards } from "@/data/streamvibe-model";
 
 export default function ServiceSection() {
   return (
-    <div className="absolute top-[1524px] left-[81px] inline-flex w-[1279px] flex-col items-start justify-start gap-14">
+    <div className="pt-16 w-full max-w-[1440px] mx-auto flex flex-col items-start justify-start gap-14">
       <div className="flex flex-col items-start justify-start gap-2.5 self-stretch pr-36">
         <div className="justify-start self-stretch font-['Manrope'] text-3xl leading-10 font-bold text-white">
           We Provide you streaming experience across various devices.
@@ -15,27 +15,16 @@ export default function ServiceSection() {
           entertainment.
         </div>
       </div>
-      <div className="flex flex-col items-start justify-start gap-5 self-stretch">
-        <div className="inline-flex items-start justify-start gap-5 self-stretch">
-          {service_cards.slice(0, 3).map((card) => (
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {service_cards.slice(0, 6).map((card) => (
+          <div key={card.icon_name} className="w-full">
             <ServiceCard
-              key={card.icon_name}
               icon_name={card.icon_name}
               title={card.title}
               hint={card.hint}
             />
-          ))}
-        </div>
-        <div className="inline-flex items-start justify-start gap-5 self-stretch">
-          {service_cards.slice(3, 6).map((card) => (
-            <ServiceCard
-              key={card.icon_name}
-              icon_name={card.icon_name}
-              title={card.title}
-              hint={card.hint}
-            />
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

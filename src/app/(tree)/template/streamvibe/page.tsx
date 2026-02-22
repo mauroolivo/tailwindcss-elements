@@ -70,9 +70,11 @@ export default function Page() {
 
       <CategorySection />
 
-      {/* <ServiceSection />
+      <ServiceSection />
+
       <FaqSection />
-      <div className="absolute top-[2986px] left-[80px] inline-flex w-[1280px] flex-col items-start justify-start gap-14">
+
+      <div className="pt-16 mx-auto flex w-full max-w-7xl  flex-col items-start justify-start gap-14">
         <div className="inline-flex items-end justify-start gap-20 self-stretch">
           <div className="inline-flex flex-1 flex-col items-start justify-start gap-2.5">
             <div className="justify-start self-stretch font-['Manrope'] text-3xl leading-10 font-bold text-white">
@@ -97,7 +99,8 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="inline-flex items-start justify-start gap-5 self-stretch">
+
+        <div className="inline-flex items-end justify-start gap-20 self-stretch">
           <div className="inline-flex flex-1 flex-col items-start justify-start gap-10 rounded-[10px] bg-zinc-900 p-10 outline outline-1 outline-offset-[-1px] outline-neutral-800">
             <div className="flex flex-col items-start justify-start gap-3 self-stretch">
               <div className="justify-start self-stretch font-['Manrope'] text-xl leading-8 font-bold text-white">
@@ -193,6 +196,7 @@ export default function Page() {
           </div>
         </div>
       </div>
+      {/*
       <div className="absolute top-[3611px] left-[80px] inline-flex w-[1280px] items-center justify-start gap-24 overflow-hidden rounded-xl bg-stone-950 px-14 py-20 outline outline-1 outline-offset-[-1px] outline-neutral-800">
         <div className="absolute top-[-60px] left-0 inline-flex h-96 w-[1281px] flex-col items-start justify-start gap-5">
           <div className="inline-flex flex-1 items-start justify-start gap-5 self-stretch">

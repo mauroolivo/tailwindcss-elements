@@ -18,14 +18,14 @@ export default function ExploreCard({ title, images }: ExploreCardProps) {
             className="flex-1 self-stretch rounded-md"
             src={imgs[0]}
             alt={`${title}-1`}
-            width={93}
+            width={103}
             height={103}
           />
           <Image
             className="flex-1 self-stretch rounded-md"
             src={imgs[1]}
             alt={`${title}-2`}
-            width={93}
+            width={103}
             height={103}
           />
         </div>
@@ -45,7 +45,7 @@ export default function ExploreCard({ title, images }: ExploreCardProps) {
             height={103}
           />
         </div>
-        <div className="absolute top-0 -left-px h-52 w-48 bg-linear-to-b from-zinc-900/0 to-zinc-900" />
+        <div className="absolute top-0 -left-px h-52 w-full bg-linear-to-b from-zinc-900/0 to-zinc-900" />
       </div>
       <div className="inline-flex items-center justify-start self-stretch">
         <div className="flex-1 justify-start font-['Manrope'] text-base leading-6 font-semibold text-white">
