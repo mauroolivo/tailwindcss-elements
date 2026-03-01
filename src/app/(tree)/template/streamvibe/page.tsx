@@ -5,6 +5,7 @@ import Image from 'next/image';
 import ServiceSection from '@/components/template/streamvibe/ServiceSection';
 import FaqSection from '@/components/template/streamvibe/FaqSection';
 import CategorySection from '@/components/template/streamvibe/CategorySection';
+import PlansSection from '@/components/template/streamvibe/PlansSection';
 import {
   imgs_row_1,
   imgs_row_2,
@@ -67,134 +68,16 @@ export default function Page() {
       </div>
       <Navi />
 
-      <CategorySection />
+      <div className="px-4 min-[1440px]:px-0 sm:px-6 lg:px-10">
+        <CategorySection />
 
-      <ServiceSection />
+        <ServiceSection />
 
-      <FaqSection />
+        <FaqSection />
 
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-14 pt-16">
-        <div className="inline-flex items-end justify-start gap-20 self-stretch">
-          <div className="inline-flex flex-1 flex-col items-start justify-start gap-2.5">
-            <div className="justify-start self-stretch font-['Manrope'] text-3xl leading-10 font-bold text-white">
-              Choose the plan that&apos;s right for you
-            </div>
-            <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-              Join StreamVibe and select from our flexible subscription options
-              tailored to suit your viewing preferences. Get ready for non-stop
-              entertainment!
-            </div>
-          </div>
-          <div className="size- flex items-center justify-start rounded-lg bg-stone-950 p-2 outline -outline-offset-1 outline-neutral-800">
-            <div className="size- flex items-center justify-center gap-2.5 rounded-md bg-stone-900 px-5 py-3">
-              <div className="justify-start font-['Manrope'] text-sm leading-5 font-medium text-white">
-                Monthly
-              </div>
-            </div>
-            <div className="size- flex items-center justify-center gap-2.5 rounded-[100px] px-5 py-3">
-              <div className="justify-start font-['Manrope'] text-sm leading-5 font-medium text-neutral-400">
-                Yearly
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="inline-flex items-end justify-start gap-20 self-stretch">
-          <div className="inline-flex flex-1 flex-col items-start justify-start gap-10 rounded-[10px] bg-zinc-900 p-10 outline -outline-offset-1 outline-neutral-800">
-            <div className="flex flex-col items-start justify-start gap-3 self-stretch">
-              <div className="justify-start self-stretch font-['Manrope'] text-xl leading-8 font-bold text-white">
-                Basic Plan
-              </div>
-              <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-                Enjoy an extensive library of movies and shows, featuring a
-                range of content, including recently released titles.
-              </div>
-            </div>
-            <div className="size- inline-flex items-end justify-center gap-0.5">
-              <div className="justify-start font-['Manrope'] text-3xl leading-5 font-semibold text-white">
-                $9.99
-              </div>
-              <div className="justify-start font-['Manrope'] text-base leading-3 font-medium text-neutral-400">
-                /month
-              </div>
-            </div>
-            <div className="inline-flex items-start justify-start gap-3 self-stretch">
-              <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md bg-neutral-900 px-5 py-3.5 outline -outline-offset-1 outline-neutral-800">
-                <div className="justify-start font-['Manrope'] text-sm leading-5 font-semibold text-white">
-                  Start Free Trial
-                </div>
-              </div>
-              <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md bg-red-600 px-5 py-3.5">
-                <div className="justify-start font-['Manrope'] text-sm leading-5 font-semibold text-white">
-                  Choose Plan
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="inline-flex flex-1 flex-col items-start justify-start gap-10 rounded-[10px] bg-zinc-900 p-10 outline -outline-offset-1 outline-neutral-800">
-            <div className="flex flex-col items-start justify-start gap-3 self-stretch">
-              <div className="justify-start self-stretch font-['Manrope'] text-xl leading-8 font-bold text-white">
-                Standard Plan
-              </div>
-              <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-                Access to a wider selection of movies and shows, including most
-                new releases and exclusive content
-              </div>
-            </div>
-            <div className="size- inline-flex items-end justify-center gap-0.5">
-              <div className="justify-start font-['Manrope'] text-3xl leading-5 font-semibold text-white">
-                $12.99
-              </div>
-              <div className="justify-start font-['Manrope'] text-base leading-3 font-medium text-neutral-400">
-                /month
-              </div>
-            </div>
-            <div className="inline-flex items-start justify-start gap-3 self-stretch">
-              <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md bg-neutral-900 px-5 py-3.5 outline -outline-offset-1 outline-neutral-800">
-                <div className="justify-start font-['Manrope'] text-sm leading-5 font-semibold text-white">
-                  Start Free Trial
-                </div>
-              </div>
-              <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md bg-red-600 px-5 py-3.5">
-                <div className="justify-start font-['Manrope'] text-sm leading-5 font-semibold text-white">
-                  Choose Plan
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="inline-flex flex-1 flex-col items-start justify-start gap-10 rounded-[10px] bg-zinc-900 p-10 outline -outline-offset-1 outline-neutral-800">
-            <div className="flex flex-col items-start justify-start gap-3 self-stretch">
-              <div className="justify-start self-stretch font-['Manrope'] text-xl leading-8 font-bold text-white">
-                Premium Plan
-              </div>
-              <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
-                Access to a widest selection of movies and shows, including all
-                new releases and Offline Viewing
-              </div>
-            </div>
-            <div className="size- inline-flex items-end justify-center gap-0.5">
-              <div className="justify-start font-['Manrope'] text-3xl leading-5 font-semibold text-white">
-                $14.99
-              </div>
-              <div className="justify-start font-['Manrope'] text-base leading-3 font-medium text-neutral-400">
-                /month
-              </div>
-            </div>
-            <div className="inline-flex items-start justify-start gap-3 self-stretch">
-              <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md bg-neutral-900 px-5 py-3.5 outline -outline-offset-1 outline-neutral-800">
-                <div className="justify-start font-['Manrope'] text-sm leading-5 font-semibold text-white">
-                  Start Free Trial
-                </div>
-              </div>
-              <div className="flex flex-1 items-center justify-center gap-2.5 rounded-md bg-red-600 px-5 py-3.5">
-                <div className="justify-start font-['Manrope'] text-sm leading-5 font-semibold text-white">
-                  Choose Plan
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <PlansSection />
       </div>
+
       {/*
       <div className="absolute top-[3611px] left-[80px] inline-flex w-[1280px] items-center justify-start gap-24 overflow-hidden rounded-xl bg-stone-950 px-14 py-20 outline outline-1 outline-offset-[-1px] outline-neutral-800">
         <div className="absolute top-[-60px] left-0 inline-flex h-96 w-[1281px] flex-col items-start justify-start gap-5">

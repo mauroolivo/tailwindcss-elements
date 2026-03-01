@@ -20,7 +20,7 @@ export default function FaqSection() {
           </div>
         </div>
       </div>
-      <div className="inline-flex items-start justify-start gap-10 self-stretch">
+      <div className="flex flex-col items-start justify-start gap-10 self-stretch lg:flex-row">
         <div className="inline-flex flex-1 flex-col items-start justify-start">
           {faq_items.slice(0, 4).map((item, i) => (
             <React.Fragment key={item.order ?? i}>

@@ -12,8 +12,14 @@ export default function ServiceCard({
   hint,
 }: ServiceCardProps) {
   return (
-    <div className="to 81% inline-flex flex-1 flex-col items-start justify-start gap-6 rounded-[10px] bg-black bg-linear-220 from-red-600/10 to-red-600/0 p-10 outline -outline-offset-1 outline-neutral-800">
-      <div className="inline-flex items-center justify-start gap-3 self-stretch">
+    <div
+      className="relative inline-flex flex-1 flex-col items-start justify-start gap-6 overflow-hidden rounded-[10px] bg-neutral-950 p-10 outline -outline-offset-1 outline-neutral-800"
+      style={{
+        backgroundImage:
+          "radial-gradient(92% 92% at 100% 0%, rgba(220, 38, 38, 0.18) 0%, rgba(220, 38, 38, 0.10) 24%, rgba(220, 38, 38, 0.035) 40%, rgba(220, 38, 38, 0) 56%), linear-gradient(180deg, rgba(9, 9, 9, 1) 0%, rgba(7, 7, 7, 1) 100%)",
+      }}
+    >
+      <div className="relative z-10 inline-flex items-center justify-start gap-3 self-stretch">
         <div className="size- flex items-start justify-start gap-2.5 rounded-[10px] bg-neutral-900 p-3 outline -outline-offset-1 outline-stone-900">
           <div className="relative size-7 overflow-hidden">
             <Image
@@ -29,7 +35,7 @@ export default function ServiceCard({
           {title}
         </div>
       </div>
-      <div className="justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
+      <div className="relative z-10 justify-start self-stretch font-['Manrope'] text-base leading-6 font-normal text-neutral-400">
         {hint}
       </div>
     </div>
