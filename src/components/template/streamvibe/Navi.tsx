@@ -1,16 +1,79 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Navi() {
   const [clicked, setClicked] = useState(false);
   const [lensClicked, setLensClicked] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [highlightStyle, setHighlightStyle] = useState({ left: 0, width: 0 });
+  const [drawerHighlightStyle, setDrawerHighlightStyle] = useState({
+    top: 0,
+    height: 0,
+  });
+  const desktopNavRef = useRef<HTMLDivElement | null>(null);
+  const desktopItemRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const drawerNavRef = useRef<HTMLDivElement | null>(null);
+  const drawerItemRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   const navLinks = ["Home", "Movies & Shows", "Support", "Subscriptions"];
 
   const handleClick = () => setClicked(true);
   const handleLensClick = () => setLensClicked(true);
+
+  const updateHighlightPosition = (index: number) => {
+    const container = desktopNavRef.current;
+    const item = desktopItemRefs.current[index];
+
+    if (!container || !item) return;
+
+    const containerRect = container.getBoundingClientRect();
+    const itemRect = item.getBoundingClientRect();
+
+    setHighlightStyle({
+      left: itemRect.left - containerRect.left,
+      width: itemRect.width,
+    });
+  };
+
+  const updateDrawerHighlightPosition = (index: number) => {
+    const container = drawerNavRef.current;
+    const item = drawerItemRefs.current[index];
+
+    if (!container || !item) return;
+
+    const containerRect = container.getBoundingClientRect();
+    const itemRect = item.getBoundingClientRect();
+
+    setDrawerHighlightStyle({
+      top: itemRect.top - containerRect.top,
+      height: itemRect.height,
+    });
+  };
+
+  useEffect(() => {
+    updateHighlightPosition(activeIndex);
+  }, [activeIndex]);
+
+  useEffect(() => {
+    updateDrawerHighlightPosition(activeIndex);
+  }, [activeIndex, menuOpen]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      updateHighlightPosition(activeIndex);
+      updateDrawerHighlightPosition(activeIndex);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [activeIndex]);
+
+  useEffect(() => {
+    setActiveIndex(selectedIndex);
+  }, [selectedIndex]);
+
   return (
     <div className="absolute top-0 left-0 w-full px-6 md:px-20 py-6">
       <div className="flex items-center justify-between">
@@ -77,19 +140,36 @@ export default function Navi() {
       </div>
 
       {/* Centered nav for lg+ screens */}
-      <div className="hidden lg:flex absolute left-1/2 top-6 transform -translate-x-1/2 items-center justify-center gap-4 overflow-hidden rounded-[10px] bg-stone-950 py-2 pr-7 pl-2 outline outline-stone-900">
-        <div className="flex items-center justify-start gap-2.5 rounded-lg bg-zinc-900 px-5 py-3 outline -outline-offset-1 outline-zinc-900">
-          <div className="font-['Manrope'] text-sm leading-5 font-medium text-white">
-            {navLinks[0]}
-          </div>
-        </div>
-        {navLinks.slice(1).map((link) => (
-          <div
+      <div
+        ref={desktopNavRef}
+        onMouseLeave={() => setActiveIndex(selectedIndex)}
+        className="hidden lg:flex absolute left-1/2 top-6 transform -translate-x-1/2 items-center justify-center gap-1 overflow-hidden rounded-[10px] bg-stone-950 py-2 pr-2 pl-2 outline outline-stone-900"
+      >
+        <div
+          className="absolute top-2 bottom-2 rounded-lg bg-zinc-900 outline -outline-offset-1 outline-zinc-900 transition-all duration-300 ease-out"
+          style={{ left: highlightStyle.left, width: highlightStyle.width }}
+        />
+
+        {navLinks.map((link, index) => (
+          <button
             key={link}
-            className="font-['Manrope'] text-sm leading-5 font-normal text-stone-300"
+            ref={(element) => {
+              desktopItemRefs.current[index] = element;
+            }}
+            type="button"
+            onMouseEnter={() => setActiveIndex(index)}
+            onClick={() => {
+              setSelectedIndex(index);
+              setActiveIndex(index);
+            }}
+            className={`relative z-10 rounded-lg px-5 py-3 font-['Manrope'] text-sm leading-5 transition-colors duration-200 ${
+              activeIndex === index
+                ? "font-medium text-white"
+                : "font-normal text-stone-300"
+            }`}
           >
             {link}
-          </div>
+          </button>
         ))}
       </div>
 
@@ -120,14 +200,34 @@ export default function Navi() {
             </button>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div
+            ref={drawerNavRef}
+            onMouseLeave={() => setActiveIndex(selectedIndex)}
+            className="relative flex flex-col gap-2"
+          >
+            <div
+              className="absolute left-0 right-0 rounded-lg bg-zinc-900 outline -outline-offset-1 outline-zinc-900 transition-all duration-300 ease-out"
+              style={{
+                top: drawerHighlightStyle.top,
+                height: drawerHighlightStyle.height,
+              }}
+            />
+
             {navLinks.map((link, index) => (
               <button
                 key={link}
                 type="button"
-                className={`rounded-lg px-4 py-3 text-left text-sm font-['Manrope'] ${
-                  index === 0
-                    ? "bg-zinc-900 font-medium text-white outline -outline-offset-1 outline-zinc-900"
+                ref={(element) => {
+                  drawerItemRefs.current[index] = element;
+                }}
+                onMouseEnter={() => setActiveIndex(index)}
+                onClick={() => {
+                  setSelectedIndex(index);
+                  setActiveIndex(index);
+                }}
+                className={`relative z-10 rounded-lg px-4 py-3 text-left text-sm font-['Manrope'] transition-colors duration-200 ${
+                  activeIndex === index
+                    ? "font-medium text-white"
                     : "text-stone-300"
                 }`}
               >
